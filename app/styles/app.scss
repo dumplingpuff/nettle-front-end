@@ -1,2 +1,26 @@
 @import 'bootstrap';
 @import 'bootstrap/theme';
+
+
+.home-page {
+  background-attachment: relative;
+  background-image: url('/images/bg-1.jpg');
+  background-position: center center;
+  background-size: 100%;
+  background-size: cover;
+  width: 100%;
+  text-align: center;
+}
+
+.home-page h1 {
+  margin-top: 140px;
+}
+
+.form {
+  margin: 100px auto;
+  width: 420px;
+}
+
+.form h1 {
+  text-align: center;
+}

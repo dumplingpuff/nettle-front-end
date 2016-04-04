@@ -1,0 +1,17 @@
+{{!-- my-application component --}}
+<div class='home-page'>
+  <div class="container">
+
+    <h1>Nettle</h1>
+
+    {{#link-to "sign-up"}}Sign Up{{/link-to}}
+    {{#link-to "sign-in"}}Sign In{{/link-to}}
+  </div>
+</div>
+
+
+
+
+{{#each flashMessages.queue as |flash|}}
+  {{flash-message flash=flash}}
+{{/each}}

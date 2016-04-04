@@ -1,3 +1,4 @@
+// router
 import Ember from 'ember';
 import config from './config/environment';
 

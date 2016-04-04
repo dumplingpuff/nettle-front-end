@@ -1,2 +1,9 @@
+{{!-- trips template --}}
 {{navbar-normal}}
-{{outlet}}
+<div class="container">
+  <div class="row">
+    {{#each model.trip as |trip|}}
+      {{trips-snippet}}
+    {{/each}}
+  </div>
+</div>

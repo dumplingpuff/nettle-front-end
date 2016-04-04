@@ -1,0 +1,33 @@
+{{!-- change-password-form template --}}
+<div class='change-password-form'>
+  <div class='container'>
+    <div class='row form'>
+      <div class="form-group">
+        <h1>Change Your Password</h1>
+        <label for="previous">Old Password</label>
+        {{input type="password"
+                class="form-control"
+                id="previous"
+                placeholder="Old password"
+                value=passwords.previous}}
+      </div>
+
+      <div class="form-group">
+        <label for="next">New Password</label>
+        {{input type="password"
+                class="form-control"
+                id="next"
+                placeholder="New password"
+                value=passwords.next}}
+      </div>
+
+      <button type="submit" class="btn btn-primary" {{action "submit"}}>
+        Change Password
+      </button>
+
+      <button class="btn btn-default" {{action "reset"}}>
+        Cancel
+      </button>
+    </div>
+  </div>
+</div>

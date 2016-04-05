@@ -1,9 +1,4 @@
 {{!-- trips snippet template --}}
-
-{{!-- <div class="trip">
-{{#unless isEditable}}
-{{list.title}}
-{{else}}
-{{/unless}}
-</div> --}}
-<p>{{trip.title}}</p>
+<div class="trip-box">
+  <p>{{#link-to 'trip' trip}}{{trip.title}}{{/link-to}}</p>
+</div>

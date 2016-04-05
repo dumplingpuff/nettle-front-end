@@ -7,7 +7,7 @@ export default DS.Model.extend({
   departure: DS.attr('date'),
   description: DS.attr('string'),
 
-  // users: DS.hasMany('user', { async: true })
+  users: DS.hasMany('user', { async: true })
 });
 
 // t.string :title, null: false

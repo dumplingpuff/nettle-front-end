@@ -1,9 +1,9 @@
 {{!-- trips template --}}
-{{navbar-normal}}
+
 <div class="container">
   <div class="row">
-    {{#each model.trip as |trip|}}
-      {{trips-snippet}}
+    {{#each model.trips as |trip|}}
+      {{trips-snippet trip=trip}}
     {{/each}}
   </div>
 </div>

@@ -3,7 +3,10 @@
 <div class="container">
   <div class="row">
     {{#each model.trips as |trip|}}
-      {{trips-snippet trip=trip}}
+    <div class="trip-box">
+      <img src='../images/fire.png'>
+      <p>{{#link-to 'trip' trip}}{{trip.title}}{{/link-to}}</p>
+    </div>
     {{/each}}
   </div>
 </div>

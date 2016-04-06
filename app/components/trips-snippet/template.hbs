@@ -1,4 +1,6 @@
 {{!-- trips snippet template --}}
 <div class="trip-box">
+  <button {{action 'destroyTrip'}} type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+  <img src='../../images/fire.png'>
   <p>{{#link-to 'trip' trip}}{{trip.title}}{{/link-to}}</p>
 </div>

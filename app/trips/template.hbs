@@ -2,12 +2,9 @@
 
 <div class="container">
   <div class="row">
-    {{#each model.trips as |trip|}}
-    <div class="trip-box">
-      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-      <img src='../images/fire.png'>
-      <p>{{#link-to 'trip' trip}}{{trip.title}}{{/link-to}}</p>
-    </div>
+    {{#each model.trips as |eachTrip|}}
+    {{trips-snippet trip=eachTrip
+                    routeDestroyTrip="destroyTrip"}}
     {{/each}}
   </div>
 </div>

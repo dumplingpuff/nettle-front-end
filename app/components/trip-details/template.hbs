@@ -11,8 +11,8 @@
 {{#unless isEditable}}
   <button {{action 'toggleEditable'}}>Edit</button>
   <h1>{{trip.title}}</h1>
-  {{#each trip.items as |item|}}
-    <p>{{item.content}}</p>
+  {{#each trip.items as |eachItem|}}
+    {{item-snippet item=eachItem}}
   {{/each}}
 {{else}}
 <tr>Title</tr>

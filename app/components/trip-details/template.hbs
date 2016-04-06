@@ -7,13 +7,11 @@
   <h1>{{input value=trip.title}}{{/input}}</h1>
 {{/unless}} --}}
 
-<div class='container'>
+
 {{#unless isEditable}}
   <button {{action 'toggleEditable'}}>Edit</button>
   <h1>{{trip.title}}</h1>
-  {{#each trip.items as |eachItem|}}
-    {{item-snippet item=eachItem}}
-  {{/each}}
+  <h2>{{trip.location}}</h2>
 {{else}}
 <tr>Title</tr>
 <tr>{{input value=trip.title placeholder='Title'}}</tr>
@@ -26,4 +24,3 @@
 <button {{action 'updateTrip'}}>Save</button>
 <button {{action 'toggleEditable'}}>Cancel</button>
 {{/unless}}
-</div>

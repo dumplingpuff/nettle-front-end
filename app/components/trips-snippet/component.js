@@ -6,6 +6,6 @@ export default Ember.Component.extend({
     destroyTrip: function(){
       console.log('Component Action : destroyTrip');
       this.sendAction('routeDestroyTrip', this.get('trip'));
-    }
+    },
   },
 });

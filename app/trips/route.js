@@ -8,7 +8,7 @@ export default Ember.Route.extend({
   },
   actions: {
     destroyTrip: function(trip){
-      console.log('Route Action : destroyPokemon');
+      console.log('Route Action : destroyTrip');
       trip.destroyRecord();
     },
   }

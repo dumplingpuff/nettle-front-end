@@ -5,5 +5,11 @@ export default Ember.Route.extend({
     return {
       trips: this.get('store').findAll('trip'),
     };
+  },
+  actions: {
+    destroyTrip: function(trip){
+      console.log('Route Action : destroyPokemon');
+      trip.destroyRecord();
+    },
   }
 });

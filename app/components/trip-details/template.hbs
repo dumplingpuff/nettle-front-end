@@ -1,1 +1,11 @@
-{{yield}}
+{{!-- trip details template --}}
+{{!-- {{#unless isEditable}} --}}
+  {{!-- <button {{action 'toggleEditable'}}>Edit</button> --}}
+
+  <h1>{{input value=trip.title placeholder='Title'}}</h1>
+  <button {{action 'updateTrip'}}>Edit</button>
+  {{!-- <h1>{{trip.location}}</h1>
+  <h1>{{trip.title}}</h1> --}}
+{{!-- {{else}}
+  <h1>{{input value=trip.title}}{{/input}}</h1>
+{{/unless}} --}}

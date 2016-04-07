@@ -5,13 +5,15 @@ a {
   text-decoration: none;
 }
 
-.home-page {
+.welcome {
   background-attachment: relative;
   background-image: url('../images/bg-1.jpg');
   background-position: center center;
   background-size: 100%;
   background-size: cover;
   bottom: 0;
+  color: rgb(229, 238, 233);
+  font-family: 'Cinzel', serif;
   left: 0;
   position: absolute;
   text-align: center;
@@ -19,21 +21,21 @@ a {
   width: 100%;
 }
 
-.home-page h1 {
+.welcome .nettle {
   color: rgb(229, 238, 233);
   font-family: 'Cinzel', serif;
   font-size: 100px;
   margin-top: 160px;
 }
 
-.home-page .btn {
+.welcome .btn {
   margin: 10px;
   text-decoration: none;
 }
 
 .form {
   margin: 100px auto;
-  width: 420px;
+  width: 350px;
 }
 
 .form h1 {

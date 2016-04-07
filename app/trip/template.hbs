@@ -8,6 +8,9 @@
 {{trip-details trip=model
                routeUpdateTrip='updateTrip'}}
 <h1>Items</h1>
+{{item-create model=model
+              routeCreateItem="createItem"}}
+
 {{#each model.items as |eachItem|}}
   {{item-snippet item=eachItem}}
 {{/each}}

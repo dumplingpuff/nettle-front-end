@@ -11,22 +11,23 @@ a {
   background-position: center center;
   background-size: 100%;
   background-size: cover;
-  position: absolute;
-  top: 0;
   bottom: 0;
   left: 0;
-  width: 100%;
+  position: absolute;
   text-align: center;
+  top: 0;
+  width: 100%;
 }
 
 .home-page h1 {
   color: rgb(229, 238, 233);
   font-family: 'Cinzel', serif;
   font-size: 100px;
-  margin-top: 140px;
+  margin-top: 160px;
 }
 
 .home-page .btn {
+  margin: 10px;
   text-decoration: none;
 }
 

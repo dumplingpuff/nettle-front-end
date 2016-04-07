@@ -1,9 +1,8 @@
 @import 'bootstrap';
 @import 'bootstrap/theme';
+@import 'color';
 
-a {
-  text-decoration: none;
-}
+// Welcome Page
 
 .welcome {
   background-attachment: relative;
@@ -42,7 +41,46 @@ a {
   text-align: center;
 }
 
+// Navbar
+
+.navbar ul > li > a {
+  background-color: transparent;
+  color: $sad-gold;
+  text-decoration: none;
+}
+
+.navbar .home {
+  color: $sad-gold;
+}
+
+.navbar {
+  background-color: $dark-blue;
+  height: 65px;
+  font-family: 'Cinzel', serif;
+}
+
+// Trips Page
+
+.page {
+  background-attachment: relative;
+  background-image: url('../images/bg-1.jpg');
+  background-position: center center;
+  background-size: 100%;
+  background-size: cover;
+  bottom: 0;
+  color: rgb(229, 238, 233);
+  font-family: 'Cinzel', serif;
+  left: 0;
+  position: absolute;
+  text-align: center;
+  right: 0;
+  top: 0;
+  width: 100%
+}
+
 .trips-display {
+  margin-top: 60px;
+  padding-top: 20px;
   width: 750px;
 }
 

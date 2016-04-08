@@ -11,7 +11,7 @@ export default DS.Model.extend({
   // items: DS.attr(),
   // users: DS.attr(),
 
-  items: DS.hasMany('item', { async: true }),
+  // items: DS.hasMany('item', { async: true }),
   users: DS.hasMany('user', { async: true })
 });
 

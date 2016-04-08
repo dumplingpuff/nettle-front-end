@@ -5,7 +5,6 @@ export default Ember.Route.extend({
   model (params) {
     return this.store.findRecord('trip', params.trip_id);
   },
-  item:{},
   actions: {
     updateTrip: function(trip) {
       console.log('Route Action: update Trip');

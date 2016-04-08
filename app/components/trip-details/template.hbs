@@ -9,7 +9,7 @@
 
 
 {{#unless isEditable}}
-  <button {{action 'toggleEditable'}}>Edit</button>
+  <button class='btn btn-primary'{{action 'toggleEditable'}}>Edit</button>
   <h1>{{trip.title}}</h1>
   <h2>{{trip.location}}</h2>
 {{else}}

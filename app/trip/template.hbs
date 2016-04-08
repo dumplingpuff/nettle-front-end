@@ -4,15 +4,18 @@
 <h1>{{model.location}}</h1>
 <h1>{{model.content}}</h1> --}}
 
-<div class='container'>
-{{trip-details trip=model
-               routeUpdateTrip='updateTrip'}}
-<h1>Items</h1>
-{{item-create model=model
-              routeCreateItem="createItem"}}
+<div class='container page'>
+  <div class='trip-page'>
+    {{trip-details trip=model
+                   routeUpdateTrip='updateTrip'}}
+    <br>
+    <h1>Items</h1>
+    {{item-create model=model
+                  routeCreateItem="createItem"}}
 
-{{#each model.items as |eachItem|}}
-  {{item-snippet item=eachItem}}
-{{/each}}
+    {{#each model.items as |eachItem|}}
+      {{item-snippet item=eachItem}}
+    {{/each}}
+  </div>
 </div>
 {{!-- {{model.title}} --}}

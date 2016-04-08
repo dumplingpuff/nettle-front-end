@@ -3,8 +3,8 @@
 {{!-- <h1>{{model.title}}</h1>
 <h1>{{model.location}}</h1>
 <h1>{{model.content}}</h1> --}}
-
-<div class='container page'>
+<div class='page'>
+<div class='container'>
   <div class='trip-page'>
     {{trip-details trip=model
                    routeUpdateTrip='updateTrip'}}
@@ -17,5 +17,6 @@
       {{item-snippet item=eachItem}}
     {{/each}}
   </div>
+</div>
 </div>
 {{!-- {{model.title}} --}}

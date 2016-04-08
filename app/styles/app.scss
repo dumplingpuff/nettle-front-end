@@ -94,6 +94,17 @@
   width: 110px;
 }
 
+.trip-box > .close > span {
+  color: $white;
+}
+
+.trip-box > .trip-title > a {
+  color: $white;
+  font-size: 20px;
+}
+
+// Trip Form
+
 .trip-form {
   margin: auto;
   width: 450px;

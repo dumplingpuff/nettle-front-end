@@ -1,0 +1,13 @@
+{{!-- trips template --}}
+
+<div class="page">
+<div class="container trips-display">
+  {{#link-to 'trip-create'}}<button class="btn">Create A Trip</button>{{/link-to}}
+    <div class="row">
+      {{#each model.trips as |eachTrip|}}
+      {{trips-snippet trip=eachTrip
+                      routeDestroyTrip="destroyTrip"}}
+      {{/each}}
+    </div>
+  </div>
+</div>

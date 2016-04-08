@@ -1,0 +1,26 @@
+{{!-- trip details template --}}
+{{!-- {{#unless isEditable}} --}}
+  {{!-- <button {{action 'toggleEditable'}}>Edit</button> --}}
+  {{!-- <h1>{{trip.location}}</h1>
+  <h1>{{trip.title}}</h1> --}}
+{{!-- {{else}}
+  <h1>{{input value=trip.title}}{{/input}}</h1>
+{{/unless}} --}}
+
+
+{{#unless isEditable}}
+  <button class='btn btn-primary'{{action 'toggleEditable'}}>Edit</button>
+  <h1>{{trip.title}}</h1>
+  <h2>{{trip.location}}</h2>
+{{else}}
+<p>Title</p>
+<p>{{input value=trip.title placeholder='Title'}}</p>
+<p>Location</p>
+<p>{{input value=trip.location placeholder='Location'}}</p>
+<p>Arrival</p>
+<p>{{input value=trip.arrival placeholder='Arrival'}}</p>
+<p>Departure</p>
+<p>{{input value=trip.departure placeholder='Departure'}}</p>
+<button class='btn btn-warning' {{action 'updateTrip'}}>Save</button>
+<button class='btn btn-default'{{action 'toggleEditable'}}>Cancel</button>
+{{/unless}}

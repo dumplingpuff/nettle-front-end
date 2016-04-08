@@ -1,26 +1,137 @@
 @import 'bootstrap';
 @import 'bootstrap/theme';
+@import 'color';
 
+// Welcome Page
 
-.home-page {
+.welcome {
   background-attachment: relative;
-  background-image: url('/images/bg-1.jpg');
+  background-image: url('../images/bg-1.jpg');
   background-position: center center;
   background-size: 100%;
   background-size: cover;
-  width: 100%;
+  bottom: 0;
+  color: rgb(229, 238, 233);
+  font-family: 'Cinzel', serif;
+  left: 0;
+  position: absolute;
   text-align: center;
+  top: 0;
+  width: 100%;
 }
 
-.home-page h1 {
-  margin-top: 140px;
+.welcome .nettle {
+  color: rgb(229, 238, 233);
+  font-family: 'Cinzel', serif;
+  font-size: 100px;
+  margin-top: 160px;
+}
+
+.welcome .btn {
+  margin: 10px;
+  text-decoration: none;
 }
 
 .form {
   margin: 100px auto;
-  width: 420px;
+  width: 350px;
 }
 
 .form h1 {
   text-align: center;
+}
+
+// Navbar
+
+.navbar ul > li > a {
+  background-color: transparent;
+  color: $sad-gold;
+  text-decoration: none;
+}
+
+.navbar .home {
+  color: $sad-gold;
+}
+
+.navbar {
+  background-color: $dark-blue;
+  height: 65px;
+  font-family: 'Cinzel', serif;
+}
+
+// Trips Page
+
+.page {
+  background-attachment: relative;
+  background-image: url('../images/bg-1.jpg');
+  background-position: center center;
+  background-size: 100%;
+  background-size: cover;
+  bottom: 0;
+  color: rgb(229, 238, 233);
+  font-family: 'Cinzel', serif;
+  left: 0;
+  position: absolute;
+  text-align: center;
+  right: 0;
+  top: 0;
+  width: 100%
+}
+
+.trips-display {
+  margin-top: 60px;
+  padding-top: 20px;
+  width: 750px;
+}
+
+.trip-box {
+  border: 1px;
+  float: left;
+  height: 110px;
+  margin: 20px;
+  padding: 20px;
+  text-align: center;
+  width: 110px;
+}
+
+.trip-box > .close > span {
+  color: $white;
+}
+
+.trip-box > .trip-title > a {
+  color: $white;
+  font-size: 20px;
+}
+
+// Trip Form
+
+.trip-form {
+  margin: auto;
+  width: 450px;
+  text-align: center;
+}
+
+.trip-form input {
+  margin: 10px;
+}
+
+.trip-form textarea {
+  height: 100px;
+  margin: 10px;
+  width: 450px;
+}
+
+.trip-page {
+  margin: auto;
+  margin-top: 60px;
+  padding-top: 50px;
+  width: 300px;
+}
+
+.trip-page button {
+  margin-bottom: 20px;
+}
+
+.trip-form-page {
+  margin-top: 90px;
 }

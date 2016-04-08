@@ -13,14 +13,14 @@
   <h1>{{trip.title}}</h1>
   <h2>{{trip.location}}</h2>
 {{else}}
-<tr>Title</tr>
-<tr>{{input value=trip.title placeholder='Title'}}</tr>
-<tr>Location</tr>
-<tr>{{input value=trip.location placeholder='Location'}}</tr>
-<tr>Arrival</tr>
-<tr>{{input value=trip.arrival placeholder='Arrival'}}</tr>
-<tr>Departure</tr>
-<tr>{{input value=trip.departure placeholder='Departure'}}</tr>
-<button {{action 'updateTrip'}}>Save</button>
-<button {{action 'toggleEditable'}}>Cancel</button>
+<p>Title</p>
+<p>{{input value=trip.title placeholder='Title'}}</p>
+<p>Location</p>
+<p>{{input value=trip.location placeholder='Location'}}</p>
+<p>Arrival</p>
+<p>{{input value=trip.arrival placeholder='Arrival'}}</p>
+<p>Departure</p>
+<p>{{input value=trip.departure placeholder='Departure'}}</p>
+<button class='btn btn-warning' {{action 'updateTrip'}}>Save</button>
+<button class='btn btn-default'{{action 'toggleEditable'}}>Cancel</button>
 {{/unless}}

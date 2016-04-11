@@ -2,8 +2,10 @@
 <div class='page'>
   <div class='container trip-form-page'>
 {{trip-form routeCreateTrip="createTrip"}}
-{{#each model.users as |eachUser|}}
-  {{user-form user=eachUser}}
-{{/each}}
-</div>
+    <div class='row users-display'>
+      {{#each model.users as |eachUser|}}
+        {{user-form user=eachUser}}
+      {{/each}}
+    </div>
+  </div>
 </div>

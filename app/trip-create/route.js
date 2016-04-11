@@ -12,7 +12,8 @@ export default Ember.Route.extend({
     createTrip: function(properties){
       console.log('Route Action : createTrip');
       this.store.createRecord('trip', properties)
-        .save().then(()=>console.log('record created'));
+        .save().then(()=>console.log('record created'))
+        .then(() => this.store.unloadAll());
       this.transitionTo('trips');
     },
   }

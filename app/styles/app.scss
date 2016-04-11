@@ -55,7 +55,6 @@
 
 .navbar {
   background-color: $dark-blue;
-  height: 65px;
   font-family: 'Cinzel', serif;
 }
 
@@ -72,30 +71,48 @@
   font-family: 'Cinzel', serif;
   left: 0;
   position: absolute;
-  text-align: center;
   right: 0;
+  text-align: center;
   top: 0;
   width: 100%
 }
 
-.trips-display {
+.trip-button {
   margin-top: 60px;
-  padding-top: 20px;
+  position: absolute;;
+  top: 60;
+}
+
+.trips-display {
+  margin-top: 100px;
+  overflow-y: auto;
   width: 750px;
 }
 
 .trip-box {
+  background-color: rgba(255, 255, 255, 0.2);
   border: 1px;
+  border-radius: 10%;
+  box-sizing: border-box;
   float: left;
-  height: 110px;
-  margin: 20px;
-  padding: 20px;
+  height: 140px;
+  margin: 15px;
   text-align: center;
-  width: 110px;
+  width: 150px;
 }
 
-.trip-box > .close > span {
-  color: $white;
+[class*='close-'] {
+  color: #777;
+  font: 14px/100% arial, sans-serif;
+  position: absolute;
+  right: 5px;
+  text-decoration: none;
+  text-shadow: 0 1px 0 #fff;
+  top: 5px;
+}
+
+.close-thik:after {
+  content: '✖'; /* UTF-8 symbol */
 }
 
 .trip-box > .trip-title > a {
@@ -107,8 +124,8 @@
 
 .trip-form {
   margin: auto;
-  width: 450px;
   text-align: center;
+  width: 450px;
 }
 
 .trip-form input {

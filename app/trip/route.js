@@ -16,7 +16,8 @@ export default Ember.Route.extend({
       console.log('Route Action: create item');
       console.log('Here is the item ' + this.get('item'));
       this.store.createRecord('item', item)
-        .save().then(()  => console.log('record created'));
+        .save().then(() => this.refresh())  
+        .then(()  => console.log('record created'));
       // model.items.pushObject(newItem);
     }
   }

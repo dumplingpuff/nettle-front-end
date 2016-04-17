@@ -9,10 +9,10 @@ export default DS.Model.extend({
   description: DS.attr('string'),
 
   items: DS.attr(),
-  // users: DS.attr(),
+  users: DS.attr(),
 
   // items: DS.hasMany('item', { async: true }),
-  users: DS.hasMany('user', { async: true })
+  // users: DS.hasMany('user', { async: true })
 });
 
 // t.string :title, null: false

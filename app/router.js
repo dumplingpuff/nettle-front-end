@@ -14,6 +14,7 @@ Router.map(function () {
   this.route('trips');
   this.route('trip', {path: '/trips/:trip_id'});
   this.route('trip-create');
+  this.route('invite');
 });
 
 export default Router;

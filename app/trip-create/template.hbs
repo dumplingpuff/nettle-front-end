@@ -1,11 +1,6 @@
 {{!-- trip create template --}}
 <div class='page'>
   <div class='container trip-form-page'>
-{{trip-form routeCreateTrip="createTrip"}}
-    <div class='row users-display'>
-      {{#each model.users as |eachUser|}}
-        {{user-form user=eachUser}}
-      {{/each}}
-    </div>
+    {{trip-form routeCreateTrip="createTrip"}}
   </div>
 </div>

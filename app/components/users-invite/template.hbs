@@ -1,0 +1,10 @@
+{{!-- invite users template --}}
+
+<div class='allusers'>
+  {{#each user as |user|}}
+    <div>
+      <p>{{user.email}}</p>
+      <button{{action 'addUser' user}} class='btn btn-primary'>Invite</button>
+    </div>
+  {{/each}}
+</div>

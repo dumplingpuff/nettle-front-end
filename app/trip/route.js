@@ -3,7 +3,10 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   model (params) {
-    return this.store.findRecord('trip', params.trip_id);
+    return {
+      trip: this.store.findRecord('trip', params.trip_id),
+      users: this.store.findAll('user'),
+    };
   },
   actions: {
     updateTrip: function(trip) {
@@ -16,7 +19,7 @@ export default Ember.Route.extend({
       console.log('Route Action: create item');
       console.log('Here is the item ' + this.get('item'));
       this.store.createRecord('item', item)
-        .save().then(() => this.refresh())  
+        .save().then(() => this.refresh())
         .then(()  => console.log('record created'));
       // model.items.pushObject(newItem);
     }

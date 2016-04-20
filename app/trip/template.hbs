@@ -3,14 +3,14 @@
 <div class='page'>
   <div class='container'>
     <div class='trip-page'>
-      {{trip-details trip=model
+      {{trip-details trip=model.trip
                      routeUpdateTrip='updateTrip'}}
       <br>
       <h1>Items</h1>
-      {{item-create model=model
+      {{item-create model=model.trip
                     routeCreateItem="createItem"}}
 
-      {{#each model.items as |eachItem|}}
+      {{#each model.trip.items as |eachItem|}}
         {{item-snippet item=eachItem}}
       {{/each}}
     </div>

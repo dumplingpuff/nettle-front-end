@@ -12,9 +12,10 @@ Router.map(function () {
   this.route('change-password');
   this.route('users');
   this.route('trips');
-  this.route('trip', {path: '/trips/:trip_id'});
+  this.route('trip', {path: '/trips/:trip_id'}, function() {
+      this.route('invite');
+  });
   this.route('trip-create');
-  this.route('invite');
 });
 
 export default Router;

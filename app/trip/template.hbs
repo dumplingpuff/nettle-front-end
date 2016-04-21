@@ -15,8 +15,8 @@
       {{/each}}
     </div>
     <div class='sidebar'>
+      {{invite-cart trip=model.trip}}
       {{outlet}}
-      {{#link-to "trip.invite" model}}<button class='btn btn-primary'>Invite Users</button>{{/link-to}}
     </div>
 
   </div>

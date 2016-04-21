@@ -110,12 +110,32 @@
 
 .sidebar {
   background-color: rgba(8, 41, 74, 1);
+  height: 100%;
   position: fixed;
   right: 0px;
   top: 51px;
-  height: 100%;
   width: 300px;
 }
+
+// User Cart
+
+.user-cart {
+  background-color: $sad-gold;
+  color: black;
+  height: 200px;
+  overflow: auto;
+}
+
+// Invite User
+
+.allusers {
+  height: 400px;
+  overflow: auto;
+}
+
+// .invite-btn {
+//   float: right;
+// }
 
 // Trip Form
 

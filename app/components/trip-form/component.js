@@ -5,6 +5,8 @@ export default Ember.Component.extend({
   actions: {
     createTrip: function() {
       console.log('Component Action: createTrip');
+      console.log('This is the form');
+      console.log(this.get('form'));
       this.sendAction('routeCreateTrip', this.get('form'));
       this.set('form', {});
     }

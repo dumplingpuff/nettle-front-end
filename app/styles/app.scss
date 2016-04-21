@@ -6,7 +6,7 @@
 
 .welcome {
   background-attachment: relative;
-  background-image: url('../images/bg-1.jpg');
+  background-image: url('../images/shooting.gif');
   background-position: center center;
   background-size: 100%;
   background-size: cover;
@@ -55,7 +55,6 @@
 
 .navbar {
   background-color: $dark-blue;
-  height: 65px;
   font-family: 'Cinzel', serif;
 }
 
@@ -72,30 +71,34 @@
   font-family: 'Cinzel', serif;
   left: 0;
   position: absolute;
-  text-align: center;
   right: 0;
+  text-align: center;
   top: 0;
   width: 100%
 }
 
-.trips-display {
+.trip-button {
   margin-top: 60px;
-  padding-top: 20px;
+  position: absolute;;
+  top: 60;
+}
+
+.trips-display {
+  margin-top: 100px;
+  overflow-y: auto;
   width: 750px;
 }
 
 .trip-box {
+  background-color: rgba(255, 255, 255, 0.2);
   border: 1px;
+  border-radius: 10%;
+  box-sizing: border-box;
   float: left;
-  height: 110px;
-  margin: 20px;
-  padding: 20px;
+  height: 140px;
+  margin: 15px;
   text-align: center;
-  width: 110px;
-}
-
-.trip-box > .close > span {
-  color: $white;
+  width: 150px;
 }
 
 .trip-box > .trip-title > a {
@@ -103,12 +106,23 @@
   font-size: 20px;
 }
 
+// Sidebar
+
+.sidebar {
+  background-color: rgba(8, 41, 74, 1);
+  position: fixed;
+  right: 0px;
+  top: 51px;
+  height: 100%;
+  width: 300px;
+}
+
 // Trip Form
 
 .trip-form {
   margin: auto;
-  width: 450px;
   text-align: center;
+  width: 450px;
 }
 
 .trip-form input {
@@ -134,4 +148,16 @@
 
 .trip-form-page {
   margin-top: 90px;
+}
+
+// Invite User
+
+.users-display {
+  margin: auto;
+  width: 300px;
+}
+
+.user-invite {
+  float: left;
+  margin: 10px;
 }

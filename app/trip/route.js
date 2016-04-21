@@ -3,10 +3,11 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   model (params) {
-    return {
+    // this.refresh();
+    return new Ember.RSVP.hash({
       trip: this.store.findRecord('trip', params.trip_id),
       users: this.store.findAll('user'),
-    };
+    });
   },
   actions: {
     updateTrip: function(trip) {

@@ -1,7 +1,5 @@
 {{!-- invite template --}}
-<p>{{model.trip.title}}</p>
-
-
 
 {{users-invite model=model
                routeAddUser="addUser"}}
+{{#link-to "trip"}}<button class='btn btn-default'>Cancel</button>{{/link-to}}

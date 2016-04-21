@@ -23,6 +23,10 @@ export default Ember.Route.extend({
         .save().then(() => this.refresh())
         .then(()  => console.log('record created'));
       // model.items.pushObject(newItem);
+    },
+    refresh: function() {
+      console.log('caught it!!!');
+      this.refresh();
     }
   }
 });

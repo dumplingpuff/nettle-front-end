@@ -123,7 +123,7 @@
   background-color: $sad-gold;
   border-bottom: 2px solid $black;
   border-top: 2px solid $black;
-  color: black;
+  color: $black;
   height: 200px;
   overflow: auto;
 }
@@ -133,7 +133,7 @@
 // Invite User
 
 .allusers {
-  height: 400px;
+  height: 355px;
   overflow: auto;
 }
 

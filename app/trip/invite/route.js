@@ -9,6 +9,7 @@ export default Ember.Route.extend({
       console.log('Route Action: Add User');
       console.log(user);
       return this.get('invite').addUser(user, id)
+      .then(() => this.store.find('trip', id))
       .then(() => console.log('success'));
       // trip.save();
       // .then(() => console.log('user added to trip'));

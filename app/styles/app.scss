@@ -121,10 +121,14 @@
 
 .user-cart {
   background-color: $sad-gold;
+  border-bottom: 2px solid $black;
+  border-top: 2px solid $black;
   color: black;
   height: 200px;
   overflow: auto;
 }
+
+
 
 // Invite User
 
@@ -133,9 +137,18 @@
   overflow: auto;
 }
 
-// .invite-btn {
-//   float: right;
-// }
+.each-user {
+  margin: 5px;
+}
+
+.each-user p {
+  float: left;
+  font-size: 13px;
+}
+
+.invite-btn {
+  float: right;
+}
 
 // Trip Form
 

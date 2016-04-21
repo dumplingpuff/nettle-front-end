@@ -5,10 +5,12 @@ import Ember from 'ember';
 export default Ember.Component.extend({
   trip:{},
   actions: {
-    addUser(user) {
+    addUser(user, id) {
       console.log('Component action: AddUser');
-      this.set('trip.user', user);
-      this.sendAction('routeAddUser', this.get('trip'));
+      console.log(user);
+      console.log("this is a trip id " + id);
+      this.set('trip.users', user);
+      this.sendAction('routeAddUser', user, id);
     }
   }
 });

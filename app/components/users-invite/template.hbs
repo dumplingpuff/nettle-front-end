@@ -2,9 +2,10 @@
 
 <div class='allusers'>
   {{#each model.users as |user|}}
-    <div>
+    <div class='each-user clearfix'>
       <p>{{user.email}}</p>
       <button{{action 'addUser' user model.trip.id}} class='btn btn-primary invite-btn'>Invite</button>
     </div>
+    <hr>
   {{/each}}
 </div>

@@ -1,1 +1,7 @@
-{{yield}}
+{{!-- invite cart template --}}
+
+<div class='user-cart'>
+  {{#each trip.users as |user|}}
+    <p>{{user.email}}</p>
+  {{/each}}
+</div>

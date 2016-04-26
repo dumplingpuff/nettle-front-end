@@ -1851,6 +1851,54 @@ define('nettle-front-end/components/trip-details/component', ['exports', 'ember'
 define("nettle-front-end/components/trip-details/template", ["exports"], function (exports) {
   exports["default"] = Ember.HTMLBars.template((function () {
     var child0 = (function () {
+      var child0 = (function () {
+        return {
+          meta: {
+            "fragmentReason": false,
+            "revision": "Ember@2.4.4",
+            "loc": {
+              "source": null,
+              "start": {
+                "line": 16,
+                "column": 2
+              },
+              "end": {
+                "line": 19,
+                "column": 2
+              }
+            },
+            "moduleName": "nettle-front-end/components/trip-details/template.hbs"
+          },
+          isEmpty: false,
+          arity: 0,
+          cachedFragment: null,
+          hasRendered: false,
+          buildFragment: function buildFragment(dom) {
+            var el0 = dom.createDocumentFragment();
+            var el1 = dom.createTextNode("  ");
+            dom.appendChild(el0, el1);
+            var el1 = dom.createElement("h5");
+            dom.appendChild(el0, el1);
+            var el1 = dom.createTextNode("\n  ");
+            dom.appendChild(el0, el1);
+            var el1 = dom.createElement("h5");
+            var el2 = dom.createComment("");
+            dom.appendChild(el1, el2);
+            dom.appendChild(el0, el1);
+            var el1 = dom.createTextNode("\n");
+            dom.appendChild(el0, el1);
+            return el0;
+          },
+          buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
+            var morphs = new Array(1);
+            morphs[0] = dom.createMorphAt(dom.childAt(fragment, [3]), 0, 0);
+            return morphs;
+          },
+          statements: [["content", "trip.arrival", ["loc", [null, [18, 6], [18, 22]]]]],
+          locals: [],
+          templates: []
+        };
+      })();
       return {
         meta: {
           "fragmentReason": false,
@@ -1862,7 +1910,7 @@ define("nettle-front-end/components/trip-details/template", ["exports"], functio
               "column": 0
             },
             "end": {
-              "line": 16,
+              "line": 22,
               "column": 0
             }
           },
@@ -1889,9 +1937,19 @@ define("nettle-front-end/components/trip-details/template", ["exports"], functio
           dom.appendChild(el0, el1);
           var el1 = dom.createTextNode("\n  ");
           dom.appendChild(el0, el1);
-          var el1 = dom.createElement("h2");
+          var el1 = dom.createElement("h4");
+          var el2 = dom.createTextNode("Location:");
+          dom.appendChild(el1, el2);
+          dom.appendChild(el0, el1);
+          var el1 = dom.createTextNode("\n  ");
+          dom.appendChild(el0, el1);
+          var el1 = dom.createElement("h4");
           var el2 = dom.createComment("");
           dom.appendChild(el1, el2);
+          dom.appendChild(el0, el1);
+          var el1 = dom.createTextNode("\n");
+          dom.appendChild(el0, el1);
+          var el1 = dom.createComment("");
           dom.appendChild(el0, el1);
           var el1 = dom.createTextNode("\n\n");
           dom.appendChild(el0, el1);
@@ -1899,15 +1957,16 @@ define("nettle-front-end/components/trip-details/template", ["exports"], functio
         },
         buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
           var element2 = dom.childAt(fragment, [1]);
-          var morphs = new Array(3);
+          var morphs = new Array(4);
           morphs[0] = dom.createElementMorph(element2);
           morphs[1] = dom.createMorphAt(dom.childAt(fragment, [3]), 0, 0);
-          morphs[2] = dom.createMorphAt(dom.childAt(fragment, [5]), 0, 0);
+          morphs[2] = dom.createMorphAt(dom.childAt(fragment, [7]), 0, 0);
+          morphs[3] = dom.createMorphAt(fragment, 9, 9, contextualElement);
           return morphs;
         },
-        statements: [["element", "action", ["toggleEditable"], [], ["loc", [null, [12, 33], [12, 60]]]], ["content", "trip.title", ["loc", [null, [13, 6], [13, 20]]]], ["content", "trip.location", ["loc", [null, [14, 6], [14, 23]]]]],
+        statements: [["element", "action", ["toggleEditable"], [], ["loc", [null, [12, 33], [12, 60]]]], ["content", "trip.title", ["loc", [null, [13, 6], [13, 20]]]], ["content", "trip.location", ["loc", [null, [15, 6], [15, 23]]]], ["block", "if", [["get", "trip.arrival", ["loc", [null, [16, 8], [16, 20]]]]], [], 0, null, ["loc", [null, [16, 2], [19, 9]]]]],
         locals: [],
-        templates: []
+        templates: [child0]
       };
     })();
     var child1 = (function () {
@@ -1918,11 +1977,11 @@ define("nettle-front-end/components/trip-details/template", ["exports"], functio
           "loc": {
             "source": null,
             "start": {
-              "line": 16,
+              "line": 22,
               "column": 0
             },
             "end": {
-              "line": 27,
+              "line": 33,
               "column": 0
             }
           },
@@ -2016,7 +2075,7 @@ define("nettle-front-end/components/trip-details/template", ["exports"], functio
           morphs[7] = dom.createElementMorph(element1);
           return morphs;
         },
-        statements: [["inline", "input", [], ["value", ["subexpr", "@mut", [["get", "trip.title", ["loc", [null, [18, 17], [18, 27]]]]], [], []], "placeholder", "Title"], ["loc", [null, [18, 3], [18, 49]]]], ["inline", "input", [], ["value", ["subexpr", "@mut", [["get", "trip.location", ["loc", [null, [20, 17], [20, 30]]]]], [], []], "placeholder", "Location"], ["loc", [null, [20, 3], [20, 55]]]], ["inline", "jqui-datepicker", [], ["value", ["subexpr", "@mut", [["get", "myDate", ["loc", [null, [22, 24], [22, 30]]]]], [], []], "placeholder", "Arrival", "yearRange", "2013:2015"], ["loc", [null, [22, 0], [22, 76]]]], ["content", "myDate", ["loc", [null, [22, 77], [22, 87]]]], ["inline", "jqui-datepicker", [], ["value", ["subexpr", "@mut", [["get", "myDate", ["loc", [null, [24, 24], [24, 30]]]]], [], []], "placeholder", "Departure", "yearRange", "2013:2015"], ["loc", [null, [24, 0], [24, 78]]]], ["content", "myDate", ["loc", [null, [24, 79], [24, 89]]]], ["element", "action", ["updateTrip"], [], ["loc", [null, [25, 32], [25, 55]]]], ["element", "action", ["toggleEditable"], [], ["loc", [null, [26, 31], [26, 58]]]]],
+        statements: [["inline", "input", [], ["value", ["subexpr", "@mut", [["get", "trip.title", ["loc", [null, [24, 17], [24, 27]]]]], [], []], "placeholder", "Title"], ["loc", [null, [24, 3], [24, 49]]]], ["inline", "input", [], ["value", ["subexpr", "@mut", [["get", "trip.location", ["loc", [null, [26, 17], [26, 30]]]]], [], []], "placeholder", "Location"], ["loc", [null, [26, 3], [26, 55]]]], ["inline", "jqui-datepicker", [], ["value", ["subexpr", "@mut", [["get", "myDate", ["loc", [null, [28, 24], [28, 30]]]]], [], []], "placeholder", "Arrival", "yearRange", "2013:2015"], ["loc", [null, [28, 0], [28, 76]]]], ["content", "myDate", ["loc", [null, [28, 77], [28, 87]]]], ["inline", "jqui-datepicker", [], ["value", ["subexpr", "@mut", [["get", "myDate", ["loc", [null, [30, 24], [30, 30]]]]], [], []], "placeholder", "Departure", "yearRange", "2013:2015"], ["loc", [null, [30, 0], [30, 78]]]], ["content", "myDate", ["loc", [null, [30, 79], [30, 89]]]], ["element", "action", ["updateTrip"], [], ["loc", [null, [31, 32], [31, 55]]]], ["element", "action", ["toggleEditable"], [], ["loc", [null, [32, 31], [32, 58]]]]],
         locals: [],
         templates: []
       };
@@ -2035,7 +2094,7 @@ define("nettle-front-end/components/trip-details/template", ["exports"], functio
             "column": 0
           },
           "end": {
-            "line": 28,
+            "line": 34,
             "column": 0
           }
         },
@@ -2059,7 +2118,7 @@ define("nettle-front-end/components/trip-details/template", ["exports"], functio
         dom.insertBoundary(fragment, null);
         return morphs;
       },
-      statements: [["block", "unless", [["get", "isEditable", ["loc", [null, [11, 10], [11, 20]]]]], [], 0, 1, ["loc", [null, [11, 0], [27, 11]]]]],
+      statements: [["block", "unless", [["get", "isEditable", ["loc", [null, [11, 10], [11, 20]]]]], [], 0, 1, ["loc", [null, [11, 0], [33, 11]]]]],
       locals: [],
       templates: [child0, child1]
     };

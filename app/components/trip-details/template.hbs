@@ -11,7 +11,13 @@
 {{#unless isEditable}}
   <button class='btn btn-primary'{{action 'toggleEditable'}}>Edit</button>
   <h1>{{trip.title}}</h1>
-  <h2>{{trip.location}}</h2>
+  <h4>Location:</h4>
+  <h4>{{trip.location}}</h4>
+  {{#if trip.arrival}}
+  <h5></h5>
+  <h5>{{trip.arrival}}</h5>
+  {{/if}}
+
 
 {{else}}
 <p>Title</p>

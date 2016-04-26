@@ -3,6 +3,7 @@ import AjaxService from 'ember-ajax/services/ajax';
 
 export default AjaxService.extend({
   auth: Ember.inject.service(),
+  host: 'https://floating-temple-20684.herokuapp.com',
   headers: Ember.computed('auth.credentials.token', {
     get() {
       let headers = {};

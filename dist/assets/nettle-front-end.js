@@ -2016,7 +2016,7 @@ define("nettle-front-end/components/trip-details/template", ["exports"], functio
           morphs[7] = dom.createElementMorph(element1);
           return morphs;
         },
-        statements: [["inline", "input", [], ["value", ["subexpr", "@mut", [["get", "trip.title", ["loc", [null, [18, 17], [18, 27]]]]], [], []], "placeholder", "Title"], ["loc", [null, [18, 3], [18, 49]]]], ["inline", "input", [], ["value", ["subexpr", "@mut", [["get", "trip.location", ["loc", [null, [20, 17], [20, 30]]]]], [], []], "placeholder", "Location"], ["loc", [null, [20, 3], [20, 55]]]], ["inline", "jqui-datepicker", [], ["value", ["subexpr", "@mut", [["get", "myDate", ["loc", [null, [22, 24], [22, 30]]]]], [], []], "yearRange", "2013:2015"], ["loc", [null, [22, 0], [22, 54]]]], ["content", "myDate", ["loc", [null, [22, 55], [22, 65]]]], ["inline", "jqui-datepicker", [], ["value", ["subexpr", "@mut", [["get", "myDate", ["loc", [null, [24, 24], [24, 30]]]]], [], []], "yearRange", "2013:2015"], ["loc", [null, [24, 0], [24, 54]]]], ["content", "myDate", ["loc", [null, [24, 55], [24, 65]]]], ["element", "action", ["updateTrip"], [], ["loc", [null, [25, 32], [25, 55]]]], ["element", "action", ["toggleEditable"], [], ["loc", [null, [26, 31], [26, 58]]]]],
+        statements: [["inline", "input", [], ["value", ["subexpr", "@mut", [["get", "trip.title", ["loc", [null, [18, 17], [18, 27]]]]], [], []], "placeholder", "Title"], ["loc", [null, [18, 3], [18, 49]]]], ["inline", "input", [], ["value", ["subexpr", "@mut", [["get", "trip.location", ["loc", [null, [20, 17], [20, 30]]]]], [], []], "placeholder", "Location"], ["loc", [null, [20, 3], [20, 55]]]], ["inline", "jqui-datepicker", [], ["value", ["subexpr", "@mut", [["get", "myDate", ["loc", [null, [22, 24], [22, 30]]]]], [], []], "placeholder", "Arrival", "yearRange", "2013:2015"], ["loc", [null, [22, 0], [22, 76]]]], ["content", "myDate", ["loc", [null, [22, 77], [22, 87]]]], ["inline", "jqui-datepicker", [], ["value", ["subexpr", "@mut", [["get", "myDate", ["loc", [null, [24, 24], [24, 30]]]]], [], []], "placeholder", "Departure", "yearRange", "2013:2015"], ["loc", [null, [24, 0], [24, 78]]]], ["content", "myDate", ["loc", [null, [24, 79], [24, 89]]]], ["element", "action", ["updateTrip"], [], ["loc", [null, [25, 32], [25, 55]]]], ["element", "action", ["toggleEditable"], [], ["loc", [null, [26, 31], [26, 58]]]]],
         locals: [],
         templates: []
       };
@@ -2163,7 +2163,7 @@ define("nettle-front-end/components/trip-form/template", ["exports"], function (
         morphs[5] = dom.createElementMorph(element1);
         return morphs;
       },
-      statements: [["inline", "input", [], ["placeholder", "Title", "value", ["subexpr", "@mut", [["get", "form.title", ["loc", [null, [3, 36], [3, 46]]]]], [], []]], ["loc", [null, [3, 2], [3, 48]]]], ["inline", "input", [], ["placeholder", "Location", "value", ["subexpr", "@mut", [["get", "form.location", ["loc", [null, [4, 39], [4, 52]]]]], [], []]], ["loc", [null, [4, 2], [4, 54]]]], ["inline", "jqui-datepicker", [], ["value", ["subexpr", "@mut", [["get", "arrival", ["loc", [null, [5, 26], [5, 33]]]]], [], []], "yearRange", "2013:2015"], ["loc", [null, [5, 2], [5, 57]]]], ["inline", "jqui-datepicker", [], ["value", ["subexpr", "@mut", [["get", "departure", ["loc", [null, [6, 26], [6, 35]]]]], [], []], "yearRange", "2013:2015"], ["loc", [null, [6, 2], [6, 59]]]], ["inline", "textarea", [], ["placeholder", "Description", "value", ["subexpr", "@mut", [["get", "form.description", ["loc", [null, [7, 45], [7, 61]]]]], [], []]], ["loc", [null, [7, 2], [7, 63]]]], ["element", "action", ["createTrip"], [], ["loc", [null, [9, 34], [9, 57]]]]],
+      statements: [["inline", "input", [], ["placeholder", "Title", "value", ["subexpr", "@mut", [["get", "form.title", ["loc", [null, [3, 36], [3, 46]]]]], [], []]], ["loc", [null, [3, 2], [3, 48]]]], ["inline", "input", [], ["placeholder", "Location", "value", ["subexpr", "@mut", [["get", "form.location", ["loc", [null, [4, 39], [4, 52]]]]], [], []]], ["loc", [null, [4, 2], [4, 54]]]], ["inline", "jqui-datepicker", [], ["placeholder", "Arrival", "value", ["subexpr", "@mut", [["get", "arrival", ["loc", [null, [5, 48], [5, 55]]]]], [], []], "yearRange", "2013:2015"], ["loc", [null, [5, 2], [5, 79]]]], ["inline", "jqui-datepicker", [], ["placeholder", "Departure", "value", ["subexpr", "@mut", [["get", "departure", ["loc", [null, [6, 50], [6, 59]]]]], [], []], "yearRange", "2013:2015"], ["loc", [null, [6, 2], [6, 83]]]], ["inline", "textarea", [], ["placeholder", "Description", "value", ["subexpr", "@mut", [["get", "form.description", ["loc", [null, [7, 45], [7, 61]]]]], [], []]], ["loc", [null, [7, 2], [7, 63]]]], ["element", "action", ["createTrip"], [], ["loc", [null, [9, 34], [9, 57]]]]],
       locals: [],
       templates: []
     };
@@ -3843,7 +3843,7 @@ catch(err) {
 /* jshint ignore:start */
 
 if (!runningTests) {
-  require("nettle-front-end/app")["default"].create({"name":"nettle-front-end","version":"0.0.0+9a68c6cf"});
+  require("nettle-front-end/app")["default"].create({"name":"nettle-front-end","version":"0.0.0+c937b2a1"});
 }
 
 /* jshint ignore:end */

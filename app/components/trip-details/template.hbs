@@ -19,9 +19,9 @@
 <p>Location</p>
 <p>{{input value=trip.location placeholder='Location'}}</p>
 <p>Arrival</p>
-{{jqui-datepicker value=myDate yearRange="2013:2015"}} {{myDate}}
+{{jqui-datepicker value=myDate placeholder='Arrival' yearRange="2013:2015"}} {{myDate}}
 <p>Departure</p>
-{{jqui-datepicker value=myDate yearRange="2013:2015"}} {{myDate}}
+{{jqui-datepicker value=myDate placeholder='Departure' yearRange="2013:2015"}} {{myDate}}
 <button class='btn btn-warning' {{action 'updateTrip'}}>Save</button>
 <button class='btn btn-default'{{action 'toggleEditable'}}>Cancel</button>
 {{/unless}}

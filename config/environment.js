@@ -44,5 +44,9 @@ module.exports = function(environment) {
     ENV.locationType = 'hash';
   }
 
+  ENV.baseURL = '/nettle-front-end';
+  ENV.locationType = 'hash';
+  ENV.host = 'https://nettle.herokuapp.com';
+
   return ENV;
 };

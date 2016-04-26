@@ -9,7 +9,7 @@
 define('nettle-front-end/ajax/service', ['exports', 'ember', 'ember-ajax/services/ajax'], function (exports, _ember, _emberAjaxServicesAjax) {
   exports['default'] = _emberAjaxServicesAjax['default'].extend({
     auth: _ember['default'].inject.service(),
-    host: 'https://nettle.herokuapp.com',
+
     headers: _ember['default'].computed('auth.credentials.token', {
       get: function get() {
         var headers = {};
@@ -41,7 +41,7 @@ define('nettle-front-end/app', ['exports', 'ember', 'nettle-front-end/resolver',
 define('nettle-front-end/application/adapter', ['exports', 'ember', 'active-model-adapter'], function (exports, _ember, _activeModelAdapter) {
   exports['default'] = _activeModelAdapter['default'].extend({
     auth: _ember['default'].inject.service(),
-    host: 'https://nettle.herokuapp.com',
+
     headers: _ember['default'].computed('auth.credentials.token', {
       get: function get() {
         var headers = {};
@@ -786,6 +786,33 @@ define("nettle-front-end/components/item-snippet/template", ["exports"], functio
       templates: []
     };
   })());
+});
+define('nettle-front-end/components/jqui-accordion/component', ['exports', 'ember', 'ember-cli-jquery-ui/components/jqui-accordion/component'], function (exports, _ember, _emberCliJqueryUiComponentsJquiAccordionComponent) {
+  exports['default'] = _emberCliJqueryUiComponentsJquiAccordionComponent['default'];
+});
+define('nettle-front-end/components/jqui-autocomplete/component', ['exports', 'ember', 'ember-cli-jquery-ui/components/jqui-autocomplete/component'], function (exports, _ember, _emberCliJqueryUiComponentsJquiAutocompleteComponent) {
+  exports['default'] = _emberCliJqueryUiComponentsJquiAutocompleteComponent['default'];
+});
+define('nettle-front-end/components/jqui-button/component', ['exports', 'ember', 'ember-cli-jquery-ui/components/jqui-button/component'], function (exports, _ember, _emberCliJqueryUiComponentsJquiButtonComponent) {
+  exports['default'] = _emberCliJqueryUiComponentsJquiButtonComponent['default'];
+});
+define('nettle-front-end/components/jqui-datepicker/component', ['exports', 'ember', 'ember-cli-jquery-ui/components/jqui-datepicker/component'], function (exports, _ember, _emberCliJqueryUiComponentsJquiDatepickerComponent) {
+  exports['default'] = _emberCliJqueryUiComponentsJquiDatepickerComponent['default'];
+});
+define('nettle-front-end/components/jqui-menu/component', ['exports', 'ember', 'ember-cli-jquery-ui/components/jqui-menu/component'], function (exports, _ember, _emberCliJqueryUiComponentsJquiMenuComponent) {
+  exports['default'] = _emberCliJqueryUiComponentsJquiMenuComponent['default'];
+});
+define('nettle-front-end/components/jqui-progress-bar/component', ['exports', 'ember', 'ember-cli-jquery-ui/components/jqui-progress-bar/component'], function (exports, _ember, _emberCliJqueryUiComponentsJquiProgressBarComponent) {
+  exports['default'] = _emberCliJqueryUiComponentsJquiProgressBarComponent['default'];
+});
+define('nettle-front-end/components/jqui-slider/component', ['exports', 'ember', 'ember-cli-jquery-ui/components/jqui-slider/component'], function (exports, _ember, _emberCliJqueryUiComponentsJquiSliderComponent) {
+  exports['default'] = _emberCliJqueryUiComponentsJquiSliderComponent['default'];
+});
+define('nettle-front-end/components/jqui-spinner/component', ['exports', 'ember', 'ember-cli-jquery-ui/components/jqui-spinner/component'], function (exports, _ember, _emberCliJqueryUiComponentsJquiSpinnerComponent) {
+  exports['default'] = _emberCliJqueryUiComponentsJquiSpinnerComponent['default'];
+});
+define('nettle-front-end/components/jqui-tabs/component', ['exports', 'ember', 'ember-cli-jquery-ui/components/jqui-tabs/component'], function (exports, _ember, _emberCliJqueryUiComponentsJquiTabsComponent) {
+  exports['default'] = _emberCliJqueryUiComponentsJquiTabsComponent['default'];
 });
 define('nettle-front-end/components/my-application/component', ['exports', 'ember'], function (exports, _ember) {
   exports['default'] = _ember['default'].Component.extend({
@@ -3807,7 +3834,7 @@ catch(err) {
 /* jshint ignore:start */
 
 if (!runningTests) {
-  require("nettle-front-end/app")["default"].create({"name":"nettle-front-end","version":"0.0.0+6f5ed0e6"});
+  require("nettle-front-end/app")["default"].create({"name":"nettle-front-end","version":"0.0.0+9a68c6cf"});
 }
 
 /* jshint ignore:end */

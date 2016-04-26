@@ -12,15 +12,16 @@
   <button class='btn btn-primary'{{action 'toggleEditable'}}>Edit</button>
   <h1>{{trip.title}}</h1>
   <h2>{{trip.location}}</h2>
+
 {{else}}
 <p>Title</p>
 <p>{{input value=trip.title placeholder='Title'}}</p>
 <p>Location</p>
 <p>{{input value=trip.location placeholder='Location'}}</p>
 <p>Arrival</p>
-<p>{{input value=trip.arrival placeholder='Arrival'}}</p>
+{{jqui-datepicker value=myDate yearRange="2013:2015"}} {{myDate}}
 <p>Departure</p>
-<p>{{input value=trip.departure placeholder='Departure'}}</p>
+{{jqui-datepicker value=myDate yearRange="2013:2015"}} {{myDate}}
 <button class='btn btn-warning' {{action 'updateTrip'}}>Save</button>
 <button class='btn btn-default'{{action 'toggleEditable'}}>Cancel</button>
 {{/unless}}

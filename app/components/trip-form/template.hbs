@@ -2,8 +2,8 @@
   <h1>Create a New Camping Trip</h1>
   {{input placeholder='Title' value=form.title}}
   {{input placeholder='Location' value=form.location}}
-  {{input placeholder='Arrival' value=form.arrival}}
-  {{input placeholder='Departure' value=form.departure}}
+  {{jqui-datepicker value=arrival yearRange="2013:2015"}}
+  {{jqui-datepicker value=departure yearRange="2013:2015"}}
   {{textarea placeholder='Description' value=form.description}}
 
   <button class='btn btn-warning' {{action 'createTrip'}}>Create a trip</button>

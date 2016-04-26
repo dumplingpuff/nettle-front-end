@@ -1862,7 +1862,7 @@ define("nettle-front-end/components/trip-details/template", ["exports"], functio
               "column": 0
             },
             "end": {
-              "line": 15,
+              "line": 16,
               "column": 0
             }
           },
@@ -1893,7 +1893,7 @@ define("nettle-front-end/components/trip-details/template", ["exports"], functio
           var el2 = dom.createComment("");
           dom.appendChild(el1, el2);
           dom.appendChild(el0, el1);
-          var el1 = dom.createTextNode("\n");
+          var el1 = dom.createTextNode("\n\n");
           dom.appendChild(el0, el1);
           return el0;
         },
@@ -1918,11 +1918,11 @@ define("nettle-front-end/components/trip-details/template", ["exports"], functio
           "loc": {
             "source": null,
             "start": {
-              "line": 15,
+              "line": 16,
               "column": 0
             },
             "end": {
-              "line": 26,
+              "line": 27,
               "column": 0
             }
           },
@@ -1964,9 +1964,11 @@ define("nettle-front-end/components/trip-details/template", ["exports"], functio
           dom.appendChild(el0, el1);
           var el1 = dom.createTextNode("\n");
           dom.appendChild(el0, el1);
-          var el1 = dom.createElement("p");
-          var el2 = dom.createComment("");
-          dom.appendChild(el1, el2);
+          var el1 = dom.createComment("");
+          dom.appendChild(el0, el1);
+          var el1 = dom.createTextNode(" ");
+          dom.appendChild(el0, el1);
+          var el1 = dom.createComment("");
           dom.appendChild(el0, el1);
           var el1 = dom.createTextNode("\n");
           dom.appendChild(el0, el1);
@@ -1976,9 +1978,11 @@ define("nettle-front-end/components/trip-details/template", ["exports"], functio
           dom.appendChild(el0, el1);
           var el1 = dom.createTextNode("\n");
           dom.appendChild(el0, el1);
-          var el1 = dom.createElement("p");
-          var el2 = dom.createComment("");
-          dom.appendChild(el1, el2);
+          var el1 = dom.createComment("");
+          dom.appendChild(el0, el1);
+          var el1 = dom.createTextNode(" ");
+          dom.appendChild(el0, el1);
+          var el1 = dom.createComment("");
           dom.appendChild(el0, el1);
           var el1 = dom.createTextNode("\n");
           dom.appendChild(el0, el1);
@@ -1999,18 +2003,20 @@ define("nettle-front-end/components/trip-details/template", ["exports"], functio
           return el0;
         },
         buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
-          var element0 = dom.childAt(fragment, [16]);
-          var element1 = dom.childAt(fragment, [18]);
-          var morphs = new Array(6);
+          var element0 = dom.childAt(fragment, [20]);
+          var element1 = dom.childAt(fragment, [22]);
+          var morphs = new Array(8);
           morphs[0] = dom.createMorphAt(dom.childAt(fragment, [2]), 0, 0);
           morphs[1] = dom.createMorphAt(dom.childAt(fragment, [6]), 0, 0);
-          morphs[2] = dom.createMorphAt(dom.childAt(fragment, [10]), 0, 0);
-          morphs[3] = dom.createMorphAt(dom.childAt(fragment, [14]), 0, 0);
-          morphs[4] = dom.createElementMorph(element0);
-          morphs[5] = dom.createElementMorph(element1);
+          morphs[2] = dom.createMorphAt(fragment, 10, 10, contextualElement);
+          morphs[3] = dom.createMorphAt(fragment, 12, 12, contextualElement);
+          morphs[4] = dom.createMorphAt(fragment, 16, 16, contextualElement);
+          morphs[5] = dom.createMorphAt(fragment, 18, 18, contextualElement);
+          morphs[6] = dom.createElementMorph(element0);
+          morphs[7] = dom.createElementMorph(element1);
           return morphs;
         },
-        statements: [["inline", "input", [], ["value", ["subexpr", "@mut", [["get", "trip.title", ["loc", [null, [17, 17], [17, 27]]]]], [], []], "placeholder", "Title"], ["loc", [null, [17, 3], [17, 49]]]], ["inline", "input", [], ["value", ["subexpr", "@mut", [["get", "trip.location", ["loc", [null, [19, 17], [19, 30]]]]], [], []], "placeholder", "Location"], ["loc", [null, [19, 3], [19, 55]]]], ["inline", "input", [], ["value", ["subexpr", "@mut", [["get", "trip.arrival", ["loc", [null, [21, 17], [21, 29]]]]], [], []], "placeholder", "Arrival"], ["loc", [null, [21, 3], [21, 53]]]], ["inline", "input", [], ["value", ["subexpr", "@mut", [["get", "trip.departure", ["loc", [null, [23, 17], [23, 31]]]]], [], []], "placeholder", "Departure"], ["loc", [null, [23, 3], [23, 57]]]], ["element", "action", ["updateTrip"], [], ["loc", [null, [24, 32], [24, 55]]]], ["element", "action", ["toggleEditable"], [], ["loc", [null, [25, 31], [25, 58]]]]],
+        statements: [["inline", "input", [], ["value", ["subexpr", "@mut", [["get", "trip.title", ["loc", [null, [18, 17], [18, 27]]]]], [], []], "placeholder", "Title"], ["loc", [null, [18, 3], [18, 49]]]], ["inline", "input", [], ["value", ["subexpr", "@mut", [["get", "trip.location", ["loc", [null, [20, 17], [20, 30]]]]], [], []], "placeholder", "Location"], ["loc", [null, [20, 3], [20, 55]]]], ["inline", "jqui-datepicker", [], ["value", ["subexpr", "@mut", [["get", "myDate", ["loc", [null, [22, 24], [22, 30]]]]], [], []], "yearRange", "2013:2015"], ["loc", [null, [22, 0], [22, 54]]]], ["content", "myDate", ["loc", [null, [22, 55], [22, 65]]]], ["inline", "jqui-datepicker", [], ["value", ["subexpr", "@mut", [["get", "myDate", ["loc", [null, [24, 24], [24, 30]]]]], [], []], "yearRange", "2013:2015"], ["loc", [null, [24, 0], [24, 54]]]], ["content", "myDate", ["loc", [null, [24, 55], [24, 65]]]], ["element", "action", ["updateTrip"], [], ["loc", [null, [25, 32], [25, 55]]]], ["element", "action", ["toggleEditable"], [], ["loc", [null, [26, 31], [26, 58]]]]],
         locals: [],
         templates: []
       };
@@ -2029,7 +2035,7 @@ define("nettle-front-end/components/trip-details/template", ["exports"], functio
             "column": 0
           },
           "end": {
-            "line": 27,
+            "line": 28,
             "column": 0
           }
         },
@@ -2053,7 +2059,7 @@ define("nettle-front-end/components/trip-details/template", ["exports"], functio
         dom.insertBoundary(fragment, null);
         return morphs;
       },
-      statements: [["block", "unless", [["get", "isEditable", ["loc", [null, [11, 10], [11, 20]]]]], [], 0, 1, ["loc", [null, [11, 0], [26, 11]]]]],
+      statements: [["block", "unless", [["get", "isEditable", ["loc", [null, [11, 10], [11, 20]]]]], [], 0, 1, ["loc", [null, [11, 0], [27, 11]]]]],
       locals: [],
       templates: [child0, child1]
     };
@@ -2066,6 +2072,8 @@ define('nettle-front-end/components/trip-form/component', ['exports', 'ember'], 
       createTrip: function createTrip() {
         console.log('Component Action: createTrip');
         console.log('This is the form');
+        // console.log(this.get('form'));
+        this.set('form.arrival', this.get('arrival'));
         console.log(this.get('form'));
         this.sendAction('routeCreateTrip', this.get('form'));
         this.set('form', {});
@@ -2154,7 +2162,7 @@ define("nettle-front-end/components/trip-form/template", ["exports"], function (
         morphs[5] = dom.createElementMorph(element1);
         return morphs;
       },
-      statements: [["inline", "input", [], ["placeholder", "Title", "value", ["subexpr", "@mut", [["get", "form.title", ["loc", [null, [3, 36], [3, 46]]]]], [], []]], ["loc", [null, [3, 2], [3, 48]]]], ["inline", "input", [], ["placeholder", "Location", "value", ["subexpr", "@mut", [["get", "form.location", ["loc", [null, [4, 39], [4, 52]]]]], [], []]], ["loc", [null, [4, 2], [4, 54]]]], ["inline", "input", [], ["placeholder", "Arrival", "value", ["subexpr", "@mut", [["get", "form.arrival", ["loc", [null, [5, 38], [5, 50]]]]], [], []]], ["loc", [null, [5, 2], [5, 52]]]], ["inline", "input", [], ["placeholder", "Departure", "value", ["subexpr", "@mut", [["get", "form.departure", ["loc", [null, [6, 40], [6, 54]]]]], [], []]], ["loc", [null, [6, 2], [6, 56]]]], ["inline", "textarea", [], ["placeholder", "Description", "value", ["subexpr", "@mut", [["get", "form.description", ["loc", [null, [7, 45], [7, 61]]]]], [], []]], ["loc", [null, [7, 2], [7, 63]]]], ["element", "action", ["createTrip"], [], ["loc", [null, [9, 34], [9, 57]]]]],
+      statements: [["inline", "input", [], ["placeholder", "Title", "value", ["subexpr", "@mut", [["get", "form.title", ["loc", [null, [3, 36], [3, 46]]]]], [], []]], ["loc", [null, [3, 2], [3, 48]]]], ["inline", "input", [], ["placeholder", "Location", "value", ["subexpr", "@mut", [["get", "form.location", ["loc", [null, [4, 39], [4, 52]]]]], [], []]], ["loc", [null, [4, 2], [4, 54]]]], ["inline", "jqui-datepicker", [], ["value", ["subexpr", "@mut", [["get", "arrival", ["loc", [null, [5, 26], [5, 33]]]]], [], []], "yearRange", "2013:2015"], ["loc", [null, [5, 2], [5, 57]]]], ["inline", "jqui-datepicker", [], ["value", ["subexpr", "@mut", [["get", "departure", ["loc", [null, [6, 26], [6, 35]]]]], [], []], "yearRange", "2013:2015"], ["loc", [null, [6, 2], [6, 59]]]], ["inline", "textarea", [], ["placeholder", "Description", "value", ["subexpr", "@mut", [["get", "form.description", ["loc", [null, [7, 45], [7, 61]]]]], [], []]], ["loc", [null, [7, 2], [7, 63]]]], ["element", "action", ["createTrip"], [], ["loc", [null, [9, 34], [9, 57]]]]],
       locals: [],
       templates: []
     };

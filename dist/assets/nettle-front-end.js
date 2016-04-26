@@ -3408,8 +3408,8 @@ define('nettle-front-end/trip/model', ['exports', 'ember-data'], function (expor
   exports['default'] = _emberData['default'].Model.extend({
     title: _emberData['default'].attr('string'),
     location: _emberData['default'].attr('string'),
-    arrival: _emberData['default'].attr('date'),
-    departure: _emberData['default'].attr('date'),
+    arrival: _emberData['default'].attr('string'),
+    departure: _emberData['default'].attr('string'),
     description: _emberData['default'].attr('string'),
 
     items: _emberData['default'].attr(),
@@ -4006,7 +4006,7 @@ catch(err) {
 /* jshint ignore:start */
 
 if (!runningTests) {
-  require("nettle-front-end/app")["default"].create({"name":"nettle-front-end","version":"0.0.0+11fc169d"});
+  require("nettle-front-end/app")["default"].create({"name":"nettle-front-end","version":"0.0.0+060fc709"});
 }
 
 /* jshint ignore:end */

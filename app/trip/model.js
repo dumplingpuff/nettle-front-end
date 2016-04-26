@@ -4,8 +4,8 @@ import DS from 'ember-data';
 export default DS.Model.extend({
   title: DS.attr('string'),
   location: DS.attr('string'),
-  arrival: DS.attr('date'),
-  departure: DS.attr('date'),
+  arrival: DS.attr('string'),
+  departure: DS.attr('string'),
   description: DS.attr('string'),
 
   items: DS.attr(),

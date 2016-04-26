@@ -40,7 +40,8 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-
+    ENV.baseURL = '/nettle-front-end';
+    ENV.locationType = 'hash';
   }
 
   return ENV;

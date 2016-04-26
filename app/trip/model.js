@@ -14,11 +14,3 @@ export default DS.Model.extend({
   // items: DS.hasMany('item', { async: true }),
   // users: DS.hasMany('user', { async: true })
 });
-
-// t.string :title, null: false
-// t.string :location, null: false
-// t.date :arrival
-// t.date :departure
-// t.text :description
-//
-// t.timestamps null: false

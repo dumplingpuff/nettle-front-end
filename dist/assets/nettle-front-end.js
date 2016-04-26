@@ -1859,11 +1859,11 @@ define("nettle-front-end/components/trip-details/template", ["exports"], functio
             "loc": {
               "source": null,
               "start": {
-                "line": 16,
+                "line": 17,
                 "column": 2
               },
               "end": {
-                "line": 19,
+                "line": 20,
                 "column": 2
               }
             },
@@ -1878,6 +1878,8 @@ define("nettle-front-end/components/trip-details/template", ["exports"], functio
             var el1 = dom.createTextNode("  ");
             dom.appendChild(el0, el1);
             var el1 = dom.createElement("h5");
+            var el2 = dom.createTextNode("Arrival Date:");
+            dom.appendChild(el1, el2);
             dom.appendChild(el0, el1);
             var el1 = dom.createTextNode("\n  ");
             dom.appendChild(el0, el1);
@@ -1894,7 +1896,107 @@ define("nettle-front-end/components/trip-details/template", ["exports"], functio
             morphs[0] = dom.createMorphAt(dom.childAt(fragment, [3]), 0, 0);
             return morphs;
           },
-          statements: [["content", "trip.arrival", ["loc", [null, [18, 6], [18, 22]]]]],
+          statements: [["content", "trip.arrival", ["loc", [null, [19, 6], [19, 22]]]]],
+          locals: [],
+          templates: []
+        };
+      })();
+      var child1 = (function () {
+        return {
+          meta: {
+            "fragmentReason": false,
+            "revision": "Ember@2.4.4",
+            "loc": {
+              "source": null,
+              "start": {
+                "line": 22,
+                "column": 2
+              },
+              "end": {
+                "line": 25,
+                "column": 2
+              }
+            },
+            "moduleName": "nettle-front-end/components/trip-details/template.hbs"
+          },
+          isEmpty: false,
+          arity: 0,
+          cachedFragment: null,
+          hasRendered: false,
+          buildFragment: function buildFragment(dom) {
+            var el0 = dom.createDocumentFragment();
+            var el1 = dom.createTextNode("  ");
+            dom.appendChild(el0, el1);
+            var el1 = dom.createElement("h5");
+            var el2 = dom.createTextNode("Departure Date:");
+            dom.appendChild(el1, el2);
+            dom.appendChild(el0, el1);
+            var el1 = dom.createTextNode("\n  ");
+            dom.appendChild(el0, el1);
+            var el1 = dom.createElement("h5");
+            var el2 = dom.createComment("");
+            dom.appendChild(el1, el2);
+            dom.appendChild(el0, el1);
+            var el1 = dom.createTextNode("\n");
+            dom.appendChild(el0, el1);
+            return el0;
+          },
+          buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
+            var morphs = new Array(1);
+            morphs[0] = dom.createMorphAt(dom.childAt(fragment, [3]), 0, 0);
+            return morphs;
+          },
+          statements: [["content", "trip.departure", ["loc", [null, [24, 6], [24, 24]]]]],
+          locals: [],
+          templates: []
+        };
+      })();
+      var child2 = (function () {
+        return {
+          meta: {
+            "fragmentReason": false,
+            "revision": "Ember@2.4.4",
+            "loc": {
+              "source": null,
+              "start": {
+                "line": 27,
+                "column": 2
+              },
+              "end": {
+                "line": 30,
+                "column": 2
+              }
+            },
+            "moduleName": "nettle-front-end/components/trip-details/template.hbs"
+          },
+          isEmpty: false,
+          arity: 0,
+          cachedFragment: null,
+          hasRendered: false,
+          buildFragment: function buildFragment(dom) {
+            var el0 = dom.createDocumentFragment();
+            var el1 = dom.createTextNode("  ");
+            dom.appendChild(el0, el1);
+            var el1 = dom.createElement("h5");
+            var el2 = dom.createTextNode("Description");
+            dom.appendChild(el1, el2);
+            dom.appendChild(el0, el1);
+            var el1 = dom.createTextNode("\n  ");
+            dom.appendChild(el0, el1);
+            var el1 = dom.createElement("h5");
+            var el2 = dom.createComment("");
+            dom.appendChild(el1, el2);
+            dom.appendChild(el0, el1);
+            var el1 = dom.createTextNode("\n");
+            dom.appendChild(el0, el1);
+            return el0;
+          },
+          buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
+            var morphs = new Array(1);
+            morphs[0] = dom.createMorphAt(dom.childAt(fragment, [3]), 0, 0);
+            return morphs;
+          },
+          statements: [["content", "trip.description", ["loc", [null, [29, 6], [29, 26]]]]],
           locals: [],
           templates: []
         };
@@ -1910,7 +2012,7 @@ define("nettle-front-end/components/trip-details/template", ["exports"], functio
               "column": 0
             },
             "end": {
-              "line": 22,
+              "line": 33,
               "column": 0
             }
           },
@@ -1947,6 +2049,14 @@ define("nettle-front-end/components/trip-details/template", ["exports"], functio
           var el2 = dom.createComment("");
           dom.appendChild(el1, el2);
           dom.appendChild(el0, el1);
+          var el1 = dom.createTextNode("\n  \n");
+          dom.appendChild(el0, el1);
+          var el1 = dom.createComment("");
+          dom.appendChild(el0, el1);
+          var el1 = dom.createTextNode("\n");
+          dom.appendChild(el0, el1);
+          var el1 = dom.createComment("");
+          dom.appendChild(el0, el1);
           var el1 = dom.createTextNode("\n");
           dom.appendChild(el0, el1);
           var el1 = dom.createComment("");
@@ -1957,16 +2067,18 @@ define("nettle-front-end/components/trip-details/template", ["exports"], functio
         },
         buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
           var element2 = dom.childAt(fragment, [1]);
-          var morphs = new Array(4);
+          var morphs = new Array(6);
           morphs[0] = dom.createElementMorph(element2);
           morphs[1] = dom.createMorphAt(dom.childAt(fragment, [3]), 0, 0);
           morphs[2] = dom.createMorphAt(dom.childAt(fragment, [7]), 0, 0);
           morphs[3] = dom.createMorphAt(fragment, 9, 9, contextualElement);
+          morphs[4] = dom.createMorphAt(fragment, 11, 11, contextualElement);
+          morphs[5] = dom.createMorphAt(fragment, 13, 13, contextualElement);
           return morphs;
         },
-        statements: [["element", "action", ["toggleEditable"], [], ["loc", [null, [12, 33], [12, 60]]]], ["content", "trip.title", ["loc", [null, [13, 6], [13, 20]]]], ["content", "trip.location", ["loc", [null, [15, 6], [15, 23]]]], ["block", "if", [["get", "trip.arrival", ["loc", [null, [16, 8], [16, 20]]]]], [], 0, null, ["loc", [null, [16, 2], [19, 9]]]]],
+        statements: [["element", "action", ["toggleEditable"], [], ["loc", [null, [12, 33], [12, 60]]]], ["content", "trip.title", ["loc", [null, [13, 6], [13, 20]]]], ["content", "trip.location", ["loc", [null, [15, 6], [15, 23]]]], ["block", "if", [["get", "trip.arrival", ["loc", [null, [17, 8], [17, 20]]]]], [], 0, null, ["loc", [null, [17, 2], [20, 9]]]], ["block", "if", [["get", "trip.departure", ["loc", [null, [22, 8], [22, 22]]]]], [], 1, null, ["loc", [null, [22, 2], [25, 9]]]], ["block", "if", [["get", "trip.description", ["loc", [null, [27, 8], [27, 24]]]]], [], 2, null, ["loc", [null, [27, 2], [30, 9]]]]],
         locals: [],
-        templates: [child0]
+        templates: [child0, child1, child2]
       };
     })();
     var child1 = (function () {
@@ -1977,11 +2089,11 @@ define("nettle-front-end/components/trip-details/template", ["exports"], functio
           "loc": {
             "source": null,
             "start": {
-              "line": 22,
+              "line": 33,
               "column": 0
             },
             "end": {
-              "line": 33,
+              "line": 44,
               "column": 0
             }
           },
@@ -2075,7 +2187,7 @@ define("nettle-front-end/components/trip-details/template", ["exports"], functio
           morphs[7] = dom.createElementMorph(element1);
           return morphs;
         },
-        statements: [["inline", "input", [], ["value", ["subexpr", "@mut", [["get", "trip.title", ["loc", [null, [24, 17], [24, 27]]]]], [], []], "placeholder", "Title"], ["loc", [null, [24, 3], [24, 49]]]], ["inline", "input", [], ["value", ["subexpr", "@mut", [["get", "trip.location", ["loc", [null, [26, 17], [26, 30]]]]], [], []], "placeholder", "Location"], ["loc", [null, [26, 3], [26, 55]]]], ["inline", "jqui-datepicker", [], ["value", ["subexpr", "@mut", [["get", "myDate", ["loc", [null, [28, 24], [28, 30]]]]], [], []], "placeholder", "Arrival", "yearRange", "2013:2015"], ["loc", [null, [28, 0], [28, 76]]]], ["content", "myDate", ["loc", [null, [28, 77], [28, 87]]]], ["inline", "jqui-datepicker", [], ["value", ["subexpr", "@mut", [["get", "myDate", ["loc", [null, [30, 24], [30, 30]]]]], [], []], "placeholder", "Departure", "yearRange", "2013:2015"], ["loc", [null, [30, 0], [30, 78]]]], ["content", "myDate", ["loc", [null, [30, 79], [30, 89]]]], ["element", "action", ["updateTrip"], [], ["loc", [null, [31, 32], [31, 55]]]], ["element", "action", ["toggleEditable"], [], ["loc", [null, [32, 31], [32, 58]]]]],
+        statements: [["inline", "input", [], ["value", ["subexpr", "@mut", [["get", "trip.title", ["loc", [null, [35, 17], [35, 27]]]]], [], []], "placeholder", "Title"], ["loc", [null, [35, 3], [35, 49]]]], ["inline", "input", [], ["value", ["subexpr", "@mut", [["get", "trip.location", ["loc", [null, [37, 17], [37, 30]]]]], [], []], "placeholder", "Location"], ["loc", [null, [37, 3], [37, 55]]]], ["inline", "jqui-datepicker", [], ["value", ["subexpr", "@mut", [["get", "myDate", ["loc", [null, [39, 24], [39, 30]]]]], [], []], "placeholder", "Arrival", "yearRange", "2013:2015"], ["loc", [null, [39, 0], [39, 76]]]], ["content", "myDate", ["loc", [null, [39, 77], [39, 87]]]], ["inline", "jqui-datepicker", [], ["value", ["subexpr", "@mut", [["get", "myDate", ["loc", [null, [41, 24], [41, 30]]]]], [], []], "placeholder", "Departure", "yearRange", "2013:2015"], ["loc", [null, [41, 0], [41, 78]]]], ["content", "myDate", ["loc", [null, [41, 79], [41, 89]]]], ["element", "action", ["updateTrip"], [], ["loc", [null, [42, 32], [42, 55]]]], ["element", "action", ["toggleEditable"], [], ["loc", [null, [43, 31], [43, 58]]]]],
         locals: [],
         templates: []
       };
@@ -2094,7 +2206,7 @@ define("nettle-front-end/components/trip-details/template", ["exports"], functio
             "column": 0
           },
           "end": {
-            "line": 34,
+            "line": 45,
             "column": 0
           }
         },
@@ -2118,7 +2230,7 @@ define("nettle-front-end/components/trip-details/template", ["exports"], functio
         dom.insertBoundary(fragment, null);
         return morphs;
       },
-      statements: [["block", "unless", [["get", "isEditable", ["loc", [null, [11, 10], [11, 20]]]]], [], 0, 1, ["loc", [null, [11, 0], [33, 11]]]]],
+      statements: [["block", "unless", [["get", "isEditable", ["loc", [null, [11, 10], [11, 20]]]]], [], 0, 1, ["loc", [null, [11, 0], [44, 11]]]]],
       locals: [],
       templates: [child0, child1]
     };
@@ -3304,14 +3416,6 @@ define('nettle-front-end/trip/model', ['exports', 'ember-data'], function (expor
     users: _emberData['default'].attr()
 
   });
-
-  // t.string :title, null: false
-  // t.string :location, null: false
-  // t.date :arrival
-  // t.date :departure
-  // t.text :description
-  //
-  // t.timestamps null: false
 });
 // trip model
 // items: DS.hasMany('item', { async: true }),
@@ -3902,7 +4006,7 @@ catch(err) {
 /* jshint ignore:start */
 
 if (!runningTests) {
-  require("nettle-front-end/app")["default"].create({"name":"nettle-front-end","version":"0.0.0+c937b2a1"});
+  require("nettle-front-end/app")["default"].create({"name":"nettle-front-end","version":"0.0.0+11fc169d"});
 }
 
 /* jshint ignore:end */

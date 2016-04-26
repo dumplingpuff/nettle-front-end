@@ -13,9 +13,20 @@
   <h1>{{trip.title}}</h1>
   <h4>Location:</h4>
   <h4>{{trip.location}}</h4>
+  
   {{#if trip.arrival}}
-  <h5></h5>
+  <h5>Arrival Date:</h5>
   <h5>{{trip.arrival}}</h5>
+  {{/if}}
+
+  {{#if trip.departure}}
+  <h5>Departure Date:</h5>
+  <h5>{{trip.departure}}</h5>
+  {{/if}}
+
+  {{#if trip.description}}
+  <h5>Description</h5>
+  <h5>{{trip.description}}</h5>
   {{/if}}
 
 

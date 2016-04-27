@@ -13,7 +13,7 @@
   <h1>{{trip.title}}</h1>
   <h4>Location:</h4>
   <h4>{{trip.location}}</h4>
-  
+
   {{#if trip.arrival}}
   <h5>Arrival Date:</h5>
   <h5>{{trip.arrival}}</h5>
@@ -36,9 +36,10 @@
 <p>Location</p>
 <p>{{input value=trip.location placeholder='Location'}}</p>
 <p>Arrival</p>
-{{jqui-datepicker value=myDate placeholder='Arrival' yearRange="2013:2015"}} {{myDate}}
+{{jqui-datepicker value=arrival placeholder='Arrival' yearRange="2013:2015"}} {{myDate}}
 <p>Departure</p>
-{{jqui-datepicker value=myDate placeholder='Departure' yearRange="2013:2015"}} {{myDate}}
+{{jqui-datepicker value=departure placeholder='Departure' yearRange="2013:2015"}} {{myDate}}
 <button class='btn btn-warning' {{action 'updateTrip'}}>Save</button>
 <button class='btn btn-default'{{action 'toggleEditable'}}>Cancel</button>
+
 {{/unless}}

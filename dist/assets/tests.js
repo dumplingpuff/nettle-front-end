@@ -1881,6 +1881,28 @@ define('nettle-front-end/tests/unit/trips/route-test.jshint', ['exports'], funct
     assert.ok(true, 'unit/trips/route-test.js should pass jshint.');
   });
 });
+define('nettle-front-end/tests/unit/update/service-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
+
+  (0, _emberQunit.moduleFor)('service:update', 'Unit | Service | update', {
+    // Specify the other units that are required for this test.
+    // needs: ['service:foo']
+  });
+
+  // Replace this with your real tests.
+  (0, _emberQunit.test)('it exists', function (assert) {
+    var service = this.subject();
+    assert.ok(service);
+  });
+});
+define('nettle-front-end/tests/unit/update/service-test.jshint', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint - unit/update/service-test.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'unit/update/service-test.js should pass jshint.');
+  });
+});
 define('nettle-front-end/tests/user/model.jshint', ['exports'], function (exports) {
   'use strict';
 

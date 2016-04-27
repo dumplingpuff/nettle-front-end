@@ -1832,14 +1832,17 @@ define("nettle-front-end/components/sign-up-form/template", ["exports"], functio
 define('nettle-front-end/components/trip-details/component', ['exports', 'ember'], function (exports, _ember) {
   exports['default'] = _ember['default'].Component.extend({
     isEditable: false,
-
+    form: {},
     actions: {
       toggleEditable: function toggleEditable() {
         this.toggleProperty('isEditable');
       },
       updateTrip: function updateTrip() {
         console.log('Component Action : updateTrip');
-        this.sendAction('routeUpdateTrip', this.get('trip'));
+        this.set('form.arrival', this.get('arrival'));
+        this.set('form.departure', this.get('departure'));
+        this.set('form', this.get('trip'));
+        this.sendAction('routeUpdateTrip', this.get('form'));
         this.set('isEditable', false);
       }
     },
@@ -2049,7 +2052,7 @@ define("nettle-front-end/components/trip-details/template", ["exports"], functio
           var el2 = dom.createComment("");
           dom.appendChild(el1, el2);
           dom.appendChild(el0, el1);
-          var el1 = dom.createTextNode("\n  \n");
+          var el1 = dom.createTextNode("\n\n");
           dom.appendChild(el0, el1);
           var el1 = dom.createComment("");
           dom.appendChild(el0, el1);
@@ -2093,7 +2096,7 @@ define("nettle-front-end/components/trip-details/template", ["exports"], functio
               "column": 0
             },
             "end": {
-              "line": 44,
+              "line": 45,
               "column": 0
             }
           },
@@ -2169,7 +2172,7 @@ define("nettle-front-end/components/trip-details/template", ["exports"], functio
           var el2 = dom.createTextNode("Cancel");
           dom.appendChild(el1, el2);
           dom.appendChild(el0, el1);
-          var el1 = dom.createTextNode("\n");
+          var el1 = dom.createTextNode("\n\n");
           dom.appendChild(el0, el1);
           return el0;
         },
@@ -2187,7 +2190,7 @@ define("nettle-front-end/components/trip-details/template", ["exports"], functio
           morphs[7] = dom.createElementMorph(element1);
           return morphs;
         },
-        statements: [["inline", "input", [], ["value", ["subexpr", "@mut", [["get", "trip.title", ["loc", [null, [35, 17], [35, 27]]]]], [], []], "placeholder", "Title"], ["loc", [null, [35, 3], [35, 49]]]], ["inline", "input", [], ["value", ["subexpr", "@mut", [["get", "trip.location", ["loc", [null, [37, 17], [37, 30]]]]], [], []], "placeholder", "Location"], ["loc", [null, [37, 3], [37, 55]]]], ["inline", "jqui-datepicker", [], ["value", ["subexpr", "@mut", [["get", "myDate", ["loc", [null, [39, 24], [39, 30]]]]], [], []], "placeholder", "Arrival", "yearRange", "2013:2015"], ["loc", [null, [39, 0], [39, 76]]]], ["content", "myDate", ["loc", [null, [39, 77], [39, 87]]]], ["inline", "jqui-datepicker", [], ["value", ["subexpr", "@mut", [["get", "myDate", ["loc", [null, [41, 24], [41, 30]]]]], [], []], "placeholder", "Departure", "yearRange", "2013:2015"], ["loc", [null, [41, 0], [41, 78]]]], ["content", "myDate", ["loc", [null, [41, 79], [41, 89]]]], ["element", "action", ["updateTrip"], [], ["loc", [null, [42, 32], [42, 55]]]], ["element", "action", ["toggleEditable"], [], ["loc", [null, [43, 31], [43, 58]]]]],
+        statements: [["inline", "input", [], ["value", ["subexpr", "@mut", [["get", "trip.title", ["loc", [null, [35, 17], [35, 27]]]]], [], []], "placeholder", "Title"], ["loc", [null, [35, 3], [35, 49]]]], ["inline", "input", [], ["value", ["subexpr", "@mut", [["get", "trip.location", ["loc", [null, [37, 17], [37, 30]]]]], [], []], "placeholder", "Location"], ["loc", [null, [37, 3], [37, 55]]]], ["inline", "jqui-datepicker", [], ["value", ["subexpr", "@mut", [["get", "arrival", ["loc", [null, [39, 24], [39, 31]]]]], [], []], "placeholder", "Arrival", "yearRange", "2013:2015"], ["loc", [null, [39, 0], [39, 77]]]], ["content", "myDate", ["loc", [null, [39, 78], [39, 88]]]], ["inline", "jqui-datepicker", [], ["value", ["subexpr", "@mut", [["get", "departure", ["loc", [null, [41, 24], [41, 33]]]]], [], []], "placeholder", "Departure", "yearRange", "2013:2015"], ["loc", [null, [41, 0], [41, 81]]]], ["content", "myDate", ["loc", [null, [41, 82], [41, 92]]]], ["element", "action", ["updateTrip"], [], ["loc", [null, [42, 32], [42, 55]]]], ["element", "action", ["toggleEditable"], [], ["loc", [null, [43, 31], [43, 58]]]]],
         locals: [],
         templates: []
       };
@@ -2206,7 +2209,7 @@ define("nettle-front-end/components/trip-details/template", ["exports"], functio
             "column": 0
           },
           "end": {
-            "line": 45,
+            "line": 46,
             "column": 0
           }
         },
@@ -2230,7 +2233,7 @@ define("nettle-front-end/components/trip-details/template", ["exports"], functio
         dom.insertBoundary(fragment, null);
         return morphs;
       },
-      statements: [["block", "unless", [["get", "isEditable", ["loc", [null, [11, 10], [11, 20]]]]], [], 0, 1, ["loc", [null, [11, 0], [44, 11]]]]],
+      statements: [["block", "unless", [["get", "isEditable", ["loc", [null, [11, 10], [11, 20]]]]], [], 0, 1, ["loc", [null, [11, 0], [45, 11]]]]],
       locals: [],
       templates: [child0, child1]
     };
@@ -2244,8 +2247,8 @@ define('nettle-front-end/components/trip-form/component', ['exports', 'ember'], 
         console.log('Component Action: createTrip');
         console.log('This is the form');
         // console.log(this.get('form'));
-        this.set('form.arrival', new Date(this.get('arrival')));
-        this.set('form.arrival', new Date(this.get('departure')));
+        this.set('form.arrival', this.get('arrival'));
+        this.set('form.departure', this.get('departure'));
         console.log(this.get('form'));
         this.sendAction('routeCreateTrip', this.get('form'));
         this.set('form', {});
@@ -4006,7 +4009,7 @@ catch(err) {
 /* jshint ignore:start */
 
 if (!runningTests) {
-  require("nettle-front-end/app")["default"].create({"name":"nettle-front-end","version":"0.0.0+060fc709"});
+  require("nettle-front-end/app")["default"].create({"name":"nettle-front-end","version":"0.0.0+0365443a"});
 }
 
 /* jshint ignore:end */

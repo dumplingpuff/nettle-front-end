@@ -9,9 +9,6 @@ export default Ember.Component.extend({
     },
     updateTrip: function(){
       console.log('Component Action : updateTrip');
-      this.set('form.arrival', this.get('arrival'));
-      this.set('form.departure', this.get('departure'));
-      this.set('form', this.get('trip'));
       this.sendAction('routeUpdateTrip', this.get('form'));
       this.set('isEditable', false);
     },

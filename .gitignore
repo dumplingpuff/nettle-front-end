@@ -60,7 +60,11 @@ jspm_packages
 .LSOverride
 
 # Icon must end with two \r
+<<<<<<< 8dbe909d1b9ed6a45ee977916cf96337705ba8bc
 Icon
+=======
+Icon
+>>>>>>> dist
 
 # Thumbnails
 ._*
@@ -113,3 +117,7 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+<<<<<<< 8dbe909d1b9ed6a45ee977916cf96337705ba8bc
+=======
+
+>>>>>>> dist

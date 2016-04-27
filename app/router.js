@@ -1,4 +1,5 @@
 // router
+
 import Ember from 'ember';
 import config from './config/environment';
 
@@ -16,6 +17,7 @@ Router.map(function () {
       this.route('invite');
   });
   this.route('trip-create');
+
 });
 
 export default Router;

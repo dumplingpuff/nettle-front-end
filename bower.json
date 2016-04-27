@@ -8,5 +8,8 @@
     "bootstrap-sass": "^3.3.6",
     "blob-polyfill": "^1.0.20150320",
     "jquery-ui": "1.11.4"
+=======
+    "bootstrap-sass": "^3.3.6"
+>>>>>>> dist
   }
 }

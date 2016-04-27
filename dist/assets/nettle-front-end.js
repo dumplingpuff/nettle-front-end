@@ -678,6 +678,7 @@ define('nettle-front-end/components/item-create/component', ['exports', 'ember']
         console.log(this.get('form'));
         this.set('form.trip', model);
         this.sendAction('routeCreateItem', this.get('form'));
+        // view.$('input').value = '';
       }
     }
   });
@@ -1862,12 +1863,12 @@ define("nettle-front-end/components/trip-details/template", ["exports"], functio
             "loc": {
               "source": null,
               "start": {
-                "line": 17,
-                "column": 2
+                "line": 20,
+                "column": 6
               },
               "end": {
-                "line": 20,
-                "column": 2
+                "line": 25,
+                "column": 6
               }
             },
             "moduleName": "nettle-front-end/components/trip-details/template.hbs"
@@ -1878,16 +1879,23 @@ define("nettle-front-end/components/trip-details/template", ["exports"], functio
           hasRendered: false,
           buildFragment: function buildFragment(dom) {
             var el0 = dom.createDocumentFragment();
-            var el1 = dom.createTextNode("  ");
+            var el1 = dom.createTextNode("      ");
             dom.appendChild(el0, el1);
-            var el1 = dom.createElement("h5");
-            var el2 = dom.createTextNode("Arrival Date:");
+            var el1 = dom.createElement("div");
+            dom.setAttribute(el1, "class", "col-md-2 col-md-offset-4");
+            var el2 = dom.createTextNode("\n        ");
             dom.appendChild(el1, el2);
-            dom.appendChild(el0, el1);
-            var el1 = dom.createTextNode("\n  ");
-            dom.appendChild(el0, el1);
-            var el1 = dom.createElement("h5");
-            var el2 = dom.createComment("");
+            var el2 = dom.createElement("h5");
+            var el3 = dom.createTextNode("Arrival Date:");
+            dom.appendChild(el2, el3);
+            dom.appendChild(el1, el2);
+            var el2 = dom.createTextNode("\n        ");
+            dom.appendChild(el1, el2);
+            var el2 = dom.createElement("h5");
+            var el3 = dom.createComment("");
+            dom.appendChild(el2, el3);
+            dom.appendChild(el1, el2);
+            var el2 = dom.createTextNode("\n      ");
             dom.appendChild(el1, el2);
             dom.appendChild(el0, el1);
             var el1 = dom.createTextNode("\n");
@@ -1896,10 +1904,10 @@ define("nettle-front-end/components/trip-details/template", ["exports"], functio
           },
           buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
             var morphs = new Array(1);
-            morphs[0] = dom.createMorphAt(dom.childAt(fragment, [3]), 0, 0);
+            morphs[0] = dom.createMorphAt(dom.childAt(fragment, [1, 3]), 0, 0);
             return morphs;
           },
-          statements: [["content", "trip.arrival", ["loc", [null, [19, 6], [19, 22]]]]],
+          statements: [["content", "trip.arrival", ["loc", [null, [23, 12], [23, 28]]]]],
           locals: [],
           templates: []
         };
@@ -1912,12 +1920,12 @@ define("nettle-front-end/components/trip-details/template", ["exports"], functio
             "loc": {
               "source": null,
               "start": {
-                "line": 22,
-                "column": 2
+                "line": 27,
+                "column": 6
               },
               "end": {
-                "line": 25,
-                "column": 2
+                "line": 32,
+                "column": 6
               }
             },
             "moduleName": "nettle-front-end/components/trip-details/template.hbs"
@@ -1928,16 +1936,23 @@ define("nettle-front-end/components/trip-details/template", ["exports"], functio
           hasRendered: false,
           buildFragment: function buildFragment(dom) {
             var el0 = dom.createDocumentFragment();
-            var el1 = dom.createTextNode("  ");
+            var el1 = dom.createTextNode("      ");
             dom.appendChild(el0, el1);
-            var el1 = dom.createElement("h5");
-            var el2 = dom.createTextNode("Departure Date:");
+            var el1 = dom.createElement("div");
+            dom.setAttribute(el1, "class", "col-md-2");
+            var el2 = dom.createTextNode("\n        ");
             dom.appendChild(el1, el2);
-            dom.appendChild(el0, el1);
-            var el1 = dom.createTextNode("\n  ");
-            dom.appendChild(el0, el1);
-            var el1 = dom.createElement("h5");
-            var el2 = dom.createComment("");
+            var el2 = dom.createElement("h5");
+            var el3 = dom.createTextNode("Departure Date:");
+            dom.appendChild(el2, el3);
+            dom.appendChild(el1, el2);
+            var el2 = dom.createTextNode("\n        ");
+            dom.appendChild(el1, el2);
+            var el2 = dom.createElement("h5");
+            var el3 = dom.createComment("");
+            dom.appendChild(el2, el3);
+            dom.appendChild(el1, el2);
+            var el2 = dom.createTextNode("\n      ");
             dom.appendChild(el1, el2);
             dom.appendChild(el0, el1);
             var el1 = dom.createTextNode("\n");
@@ -1946,10 +1961,10 @@ define("nettle-front-end/components/trip-details/template", ["exports"], functio
           },
           buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
             var morphs = new Array(1);
-            morphs[0] = dom.createMorphAt(dom.childAt(fragment, [3]), 0, 0);
+            morphs[0] = dom.createMorphAt(dom.childAt(fragment, [1, 3]), 0, 0);
             return morphs;
           },
-          statements: [["content", "trip.departure", ["loc", [null, [24, 6], [24, 24]]]]],
+          statements: [["content", "trip.departure", ["loc", [null, [30, 12], [30, 30]]]]],
           locals: [],
           templates: []
         };
@@ -1962,12 +1977,12 @@ define("nettle-front-end/components/trip-details/template", ["exports"], functio
             "loc": {
               "source": null,
               "start": {
-                "line": 27,
-                "column": 2
+                "line": 35,
+                "column": 4
               },
               "end": {
-                "line": 30,
-                "column": 2
+                "line": 38,
+                "column": 4
               }
             },
             "moduleName": "nettle-front-end/components/trip-details/template.hbs"
@@ -1978,13 +1993,13 @@ define("nettle-front-end/components/trip-details/template", ["exports"], functio
           hasRendered: false,
           buildFragment: function buildFragment(dom) {
             var el0 = dom.createDocumentFragment();
-            var el1 = dom.createTextNode("  ");
+            var el1 = dom.createTextNode("    ");
             dom.appendChild(el0, el1);
             var el1 = dom.createElement("h5");
             var el2 = dom.createTextNode("Description");
             dom.appendChild(el1, el2);
             dom.appendChild(el0, el1);
-            var el1 = dom.createTextNode("\n  ");
+            var el1 = dom.createTextNode("\n    ");
             dom.appendChild(el0, el1);
             var el1 = dom.createElement("h5");
             var el2 = dom.createComment("");
@@ -1999,7 +2014,7 @@ define("nettle-front-end/components/trip-details/template", ["exports"], functio
             morphs[0] = dom.createMorphAt(dom.childAt(fragment, [3]), 0, 0);
             return morphs;
           },
-          statements: [["content", "trip.description", ["loc", [null, [29, 6], [29, 26]]]]],
+          statements: [["content", "trip.description", ["loc", [null, [37, 8], [37, 28]]]]],
           locals: [],
           templates: []
         };
@@ -2015,7 +2030,7 @@ define("nettle-front-end/components/trip-details/template", ["exports"], functio
               "column": 0
             },
             "end": {
-              "line": 33,
+              "line": 42,
               "column": 0
             }
           },
@@ -2036,50 +2051,74 @@ define("nettle-front-end/components/trip-details/template", ["exports"], functio
           dom.appendChild(el0, el1);
           var el1 = dom.createTextNode("\n  ");
           dom.appendChild(el0, el1);
-          var el1 = dom.createElement("h1");
+          var el1 = dom.createElement("div");
+          dom.setAttribute(el1, "class", "trip-detail");
+          var el2 = dom.createTextNode("\n    ");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createElement("div");
+          dom.setAttribute(el2, "class", "trip-head");
+          var el3 = dom.createTextNode("\n      ");
+          dom.appendChild(el2, el3);
+          var el3 = dom.createElement("h4");
+          var el4 = dom.createComment("");
+          dom.appendChild(el3, el4);
+          dom.appendChild(el2, el3);
+          var el3 = dom.createTextNode("\n      ");
+          dom.appendChild(el2, el3);
+          var el3 = dom.createElement("p");
+          var el4 = dom.createTextNode("Location:");
+          dom.appendChild(el3, el4);
+          dom.appendChild(el2, el3);
+          var el3 = dom.createTextNode("\n      ");
+          dom.appendChild(el2, el3);
+          var el3 = dom.createElement("p");
+          var el4 = dom.createComment("");
+          dom.appendChild(el3, el4);
+          dom.appendChild(el2, el3);
+          var el3 = dom.createTextNode("\n    ");
+          dom.appendChild(el2, el3);
+          dom.appendChild(el1, el2);
+          var el2 = dom.createTextNode("\n    ");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createElement("div");
+          dom.setAttribute(el2, "class", "row");
+          var el3 = dom.createTextNode("\n");
+          dom.appendChild(el2, el3);
+          var el3 = dom.createComment("");
+          dom.appendChild(el2, el3);
+          var el3 = dom.createTextNode("\n");
+          dom.appendChild(el2, el3);
+          var el3 = dom.createComment("");
+          dom.appendChild(el2, el3);
+          var el3 = dom.createTextNode("    ");
+          dom.appendChild(el2, el3);
+          dom.appendChild(el1, el2);
+          var el2 = dom.createTextNode("\n\n");
+          dom.appendChild(el1, el2);
           var el2 = dom.createComment("");
           dom.appendChild(el1, el2);
-          dom.appendChild(el0, el1);
-          var el1 = dom.createTextNode("\n  ");
-          dom.appendChild(el0, el1);
-          var el1 = dom.createElement("h4");
-          var el2 = dom.createTextNode("Location:");
+          var el2 = dom.createTextNode("  ");
           dom.appendChild(el1, el2);
           dom.appendChild(el0, el1);
-          var el1 = dom.createTextNode("\n  ");
-          dom.appendChild(el0, el1);
-          var el1 = dom.createElement("h4");
-          var el2 = dom.createComment("");
-          dom.appendChild(el1, el2);
-          dom.appendChild(el0, el1);
-          var el1 = dom.createTextNode("\n\n");
-          dom.appendChild(el0, el1);
-          var el1 = dom.createComment("");
-          dom.appendChild(el0, el1);
-          var el1 = dom.createTextNode("\n");
-          dom.appendChild(el0, el1);
-          var el1 = dom.createComment("");
-          dom.appendChild(el0, el1);
-          var el1 = dom.createTextNode("\n");
-          dom.appendChild(el0, el1);
-          var el1 = dom.createComment("");
-          dom.appendChild(el0, el1);
-          var el1 = dom.createTextNode("\n\n");
+          var el1 = dom.createTextNode("\n\n\n");
           dom.appendChild(el0, el1);
           return el0;
         },
         buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
-          var element2 = dom.childAt(fragment, [1]);
+          var element3 = dom.childAt(fragment, [1]);
+          var element4 = dom.childAt(fragment, [3]);
+          var element5 = dom.childAt(element4, [1]);
+          var element6 = dom.childAt(element4, [3]);
           var morphs = new Array(6);
-          morphs[0] = dom.createElementMorph(element2);
-          morphs[1] = dom.createMorphAt(dom.childAt(fragment, [3]), 0, 0);
-          morphs[2] = dom.createMorphAt(dom.childAt(fragment, [7]), 0, 0);
-          morphs[3] = dom.createMorphAt(fragment, 9, 9, contextualElement);
-          morphs[4] = dom.createMorphAt(fragment, 11, 11, contextualElement);
-          morphs[5] = dom.createMorphAt(fragment, 13, 13, contextualElement);
+          morphs[0] = dom.createElementMorph(element3);
+          morphs[1] = dom.createMorphAt(dom.childAt(element5, [1]), 0, 0);
+          morphs[2] = dom.createMorphAt(dom.childAt(element5, [5]), 0, 0);
+          morphs[3] = dom.createMorphAt(element6, 1, 1);
+          morphs[4] = dom.createMorphAt(element6, 3, 3);
+          morphs[5] = dom.createMorphAt(element4, 5, 5);
           return morphs;
         },
-        statements: [["element", "action", ["toggleEditable"], [], ["loc", [null, [12, 33], [12, 60]]]], ["content", "trip.title", ["loc", [null, [13, 6], [13, 20]]]], ["content", "trip.location", ["loc", [null, [15, 6], [15, 23]]]], ["block", "if", [["get", "trip.arrival", ["loc", [null, [17, 8], [17, 20]]]]], [], 0, null, ["loc", [null, [17, 2], [20, 9]]]], ["block", "if", [["get", "trip.departure", ["loc", [null, [22, 8], [22, 22]]]]], [], 1, null, ["loc", [null, [22, 2], [25, 9]]]], ["block", "if", [["get", "trip.description", ["loc", [null, [27, 8], [27, 24]]]]], [], 2, null, ["loc", [null, [27, 2], [30, 9]]]]],
+        statements: [["element", "action", ["toggleEditable"], [], ["loc", [null, [12, 33], [12, 60]]]], ["content", "trip.title", ["loc", [null, [15, 10], [15, 24]]]], ["content", "trip.location", ["loc", [null, [17, 9], [17, 26]]]], ["block", "if", [["get", "trip.arrival", ["loc", [null, [20, 12], [20, 24]]]]], [], 0, null, ["loc", [null, [20, 6], [25, 13]]]], ["block", "if", [["get", "trip.departure", ["loc", [null, [27, 12], [27, 26]]]]], [], 1, null, ["loc", [null, [27, 6], [32, 13]]]], ["block", "if", [["get", "trip.description", ["loc", [null, [35, 10], [35, 26]]]]], [], 2, null, ["loc", [null, [35, 4], [38, 11]]]]],
         locals: [],
         templates: [child0, child1, child2]
       };
@@ -2092,11 +2131,11 @@ define("nettle-front-end/components/trip-details/template", ["exports"], functio
           "loc": {
             "source": null,
             "start": {
-              "line": 33,
+              "line": 42,
               "column": 0
             },
             "end": {
-              "line": 45,
+              "line": 57,
               "column": 0
             }
           },
@@ -2108,89 +2147,108 @@ define("nettle-front-end/components/trip-details/template", ["exports"], functio
         hasRendered: false,
         buildFragment: function buildFragment(dom) {
           var el0 = dom.createDocumentFragment();
-          var el1 = dom.createElement("p");
-          var el2 = dom.createTextNode("Title");
+          var el1 = dom.createElement("div");
+          dom.setAttribute(el1, "class", "trip-edit");
+          var el2 = dom.createTextNode("\n");
           dom.appendChild(el1, el2);
-          dom.appendChild(el0, el1);
-          var el1 = dom.createTextNode("\n");
-          dom.appendChild(el0, el1);
-          var el1 = dom.createElement("p");
+          var el2 = dom.createElement("p");
+          var el3 = dom.createTextNode("Title");
+          dom.appendChild(el2, el3);
+          dom.appendChild(el1, el2);
+          var el2 = dom.createTextNode("\n");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createElement("p");
+          var el3 = dom.createComment("");
+          dom.appendChild(el2, el3);
+          dom.appendChild(el1, el2);
+          var el2 = dom.createTextNode("\n");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createElement("p");
+          var el3 = dom.createTextNode("Location");
+          dom.appendChild(el2, el3);
+          dom.appendChild(el1, el2);
+          var el2 = dom.createTextNode("\n");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createElement("p");
+          var el3 = dom.createComment("");
+          dom.appendChild(el2, el3);
+          dom.appendChild(el1, el2);
+          var el2 = dom.createTextNode("\n");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createElement("p");
+          var el3 = dom.createTextNode("Arrival");
+          dom.appendChild(el2, el3);
+          dom.appendChild(el1, el2);
+          var el2 = dom.createTextNode("\n");
+          dom.appendChild(el1, el2);
           var el2 = dom.createComment("");
           dom.appendChild(el1, el2);
-          dom.appendChild(el0, el1);
-          var el1 = dom.createTextNode("\n");
-          dom.appendChild(el0, el1);
-          var el1 = dom.createElement("p");
-          var el2 = dom.createTextNode("Location");
+          var el2 = dom.createTextNode(" ");
           dom.appendChild(el1, el2);
-          dom.appendChild(el0, el1);
-          var el1 = dom.createTextNode("\n");
-          dom.appendChild(el0, el1);
-          var el1 = dom.createElement("p");
           var el2 = dom.createComment("");
           dom.appendChild(el1, el2);
-          dom.appendChild(el0, el1);
-          var el1 = dom.createTextNode("\n");
-          dom.appendChild(el0, el1);
-          var el1 = dom.createElement("p");
-          var el2 = dom.createTextNode("Arrival");
+          var el2 = dom.createTextNode("\n");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createElement("p");
+          var el3 = dom.createTextNode("Departure");
+          dom.appendChild(el2, el3);
+          dom.appendChild(el1, el2);
+          var el2 = dom.createTextNode("\n");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createComment("");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createTextNode(" ");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createComment("");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createTextNode("\n");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createElement("p");
+          var el3 = dom.createTextNode("Departure");
+          dom.appendChild(el2, el3);
+          dom.appendChild(el1, el2);
+          var el2 = dom.createTextNode("\n");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createComment("");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createTextNode("\n");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createElement("button");
+          dom.setAttribute(el2, "class", "btn btn-warning");
+          var el3 = dom.createTextNode("Save");
+          dom.appendChild(el2, el3);
+          dom.appendChild(el1, el2);
+          var el2 = dom.createTextNode("\n");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createElement("button");
+          dom.setAttribute(el2, "class", "btn btn-default");
+          var el3 = dom.createTextNode("Cancel");
+          dom.appendChild(el2, el3);
+          dom.appendChild(el1, el2);
+          var el2 = dom.createTextNode("\n");
           dom.appendChild(el1, el2);
           dom.appendChild(el0, el1);
           var el1 = dom.createTextNode("\n");
-          dom.appendChild(el0, el1);
-          var el1 = dom.createComment("");
-          dom.appendChild(el0, el1);
-          var el1 = dom.createTextNode(" ");
-          dom.appendChild(el0, el1);
-          var el1 = dom.createComment("");
-          dom.appendChild(el0, el1);
-          var el1 = dom.createTextNode("\n");
-          dom.appendChild(el0, el1);
-          var el1 = dom.createElement("p");
-          var el2 = dom.createTextNode("Departure");
-          dom.appendChild(el1, el2);
-          dom.appendChild(el0, el1);
-          var el1 = dom.createTextNode("\n");
-          dom.appendChild(el0, el1);
-          var el1 = dom.createComment("");
-          dom.appendChild(el0, el1);
-          var el1 = dom.createTextNode(" ");
-          dom.appendChild(el0, el1);
-          var el1 = dom.createComment("");
-          dom.appendChild(el0, el1);
-          var el1 = dom.createTextNode("\n");
-          dom.appendChild(el0, el1);
-          var el1 = dom.createElement("button");
-          dom.setAttribute(el1, "class", "btn btn-warning");
-          var el2 = dom.createTextNode("Save");
-          dom.appendChild(el1, el2);
-          dom.appendChild(el0, el1);
-          var el1 = dom.createTextNode("\n");
-          dom.appendChild(el0, el1);
-          var el1 = dom.createElement("button");
-          dom.setAttribute(el1, "class", "btn btn-default");
-          var el2 = dom.createTextNode("Cancel");
-          dom.appendChild(el1, el2);
-          dom.appendChild(el0, el1);
-          var el1 = dom.createTextNode("\n\n");
           dom.appendChild(el0, el1);
           return el0;
         },
         buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
-          var element0 = dom.childAt(fragment, [20]);
-          var element1 = dom.childAt(fragment, [22]);
-          var morphs = new Array(8);
-          morphs[0] = dom.createMorphAt(dom.childAt(fragment, [2]), 0, 0);
-          morphs[1] = dom.createMorphAt(dom.childAt(fragment, [6]), 0, 0);
-          morphs[2] = dom.createMorphAt(fragment, 10, 10, contextualElement);
-          morphs[3] = dom.createMorphAt(fragment, 12, 12, contextualElement);
-          morphs[4] = dom.createMorphAt(fragment, 16, 16, contextualElement);
-          morphs[5] = dom.createMorphAt(fragment, 18, 18, contextualElement);
-          morphs[6] = dom.createElementMorph(element0);
+          var element0 = dom.childAt(fragment, [0]);
+          var element1 = dom.childAt(element0, [25]);
+          var element2 = dom.childAt(element0, [27]);
+          var morphs = new Array(9);
+          morphs[0] = dom.createMorphAt(dom.childAt(element0, [3]), 0, 0);
+          morphs[1] = dom.createMorphAt(dom.childAt(element0, [7]), 0, 0);
+          morphs[2] = dom.createMorphAt(element0, 11, 11);
+          morphs[3] = dom.createMorphAt(element0, 13, 13);
+          morphs[4] = dom.createMorphAt(element0, 17, 17);
+          morphs[5] = dom.createMorphAt(element0, 19, 19);
+          morphs[6] = dom.createMorphAt(element0, 23, 23);
           morphs[7] = dom.createElementMorph(element1);
+          morphs[8] = dom.createElementMorph(element2);
           return morphs;
         },
-        statements: [["inline", "input", [], ["value", ["subexpr", "@mut", [["get", "trip.title", ["loc", [null, [35, 17], [35, 27]]]]], [], []], "placeholder", "Title"], ["loc", [null, [35, 3], [35, 49]]]], ["inline", "input", [], ["value", ["subexpr", "@mut", [["get", "trip.location", ["loc", [null, [37, 17], [37, 30]]]]], [], []], "placeholder", "Location"], ["loc", [null, [37, 3], [37, 55]]]], ["inline", "jqui-datepicker", [], ["value", ["subexpr", "@mut", [["get", "arrival", ["loc", [null, [39, 24], [39, 31]]]]], [], []], "placeholder", "Arrival", "yearRange", "2013:2015"], ["loc", [null, [39, 0], [39, 77]]]], ["content", "myDate", ["loc", [null, [39, 78], [39, 88]]]], ["inline", "jqui-datepicker", [], ["value", ["subexpr", "@mut", [["get", "departure", ["loc", [null, [41, 24], [41, 33]]]]], [], []], "placeholder", "Departure", "yearRange", "2013:2015"], ["loc", [null, [41, 0], [41, 81]]]], ["content", "myDate", ["loc", [null, [41, 82], [41, 92]]]], ["element", "action", ["updateTrip"], [], ["loc", [null, [42, 32], [42, 55]]]], ["element", "action", ["toggleEditable"], [], ["loc", [null, [43, 31], [43, 58]]]]],
+        statements: [["inline", "input", [], ["value", ["subexpr", "@mut", [["get", "trip.title", ["loc", [null, [45, 17], [45, 27]]]]], [], []], "placeholder", "Title"], ["loc", [null, [45, 3], [45, 49]]]], ["inline", "input", [], ["value", ["subexpr", "@mut", [["get", "trip.location", ["loc", [null, [47, 17], [47, 30]]]]], [], []], "placeholder", "Location"], ["loc", [null, [47, 3], [47, 55]]]], ["inline", "jqui-datepicker", [], ["value", ["subexpr", "@mut", [["get", "arrival", ["loc", [null, [49, 24], [49, 31]]]]], [], []], "placeholder", "Arrival", "yearRange", "2013:2015"], ["loc", [null, [49, 0], [49, 77]]]], ["content", "myDate", ["loc", [null, [49, 78], [49, 88]]]], ["inline", "jqui-datepicker", [], ["value", ["subexpr", "@mut", [["get", "departure", ["loc", [null, [51, 24], [51, 33]]]]], [], []], "placeholder", "Departure", "yearRange", "2013:2015"], ["loc", [null, [51, 0], [51, 81]]]], ["content", "myDate", ["loc", [null, [51, 82], [51, 92]]]], ["inline", "textarea", [], ["class", "edit-textarea", "placeholder", "Description", "value", ["subexpr", "@mut", [["get", "form.description", ["loc", [null, [53, 65], [53, 81]]]]], [], []]], ["loc", [null, [53, 0], [53, 83]]]], ["element", "action", ["updateTrip"], [], ["loc", [null, [54, 32], [54, 55]]]], ["element", "action", ["toggleEditable"], [], ["loc", [null, [55, 31], [55, 58]]]]],
         locals: [],
         templates: []
       };
@@ -2209,7 +2267,7 @@ define("nettle-front-end/components/trip-details/template", ["exports"], functio
             "column": 0
           },
           "end": {
-            "line": 46,
+            "line": 58,
             "column": 0
           }
         },
@@ -2233,7 +2291,7 @@ define("nettle-front-end/components/trip-details/template", ["exports"], functio
         dom.insertBoundary(fragment, null);
         return morphs;
       },
-      statements: [["block", "unless", [["get", "isEditable", ["loc", [null, [11, 10], [11, 20]]]]], [], 0, 1, ["loc", [null, [11, 0], [45, 11]]]]],
+      statements: [["block", "unless", [["get", "isEditable", ["loc", [null, [11, 10], [11, 20]]]]], [], 0, 1, ["loc", [null, [11, 0], [57, 11]]]]],
       locals: [],
       templates: [child0, child1]
     };
@@ -3476,12 +3534,12 @@ define("nettle-front-end/trip/template", ["exports"], function (exports) {
           "loc": {
             "source": null,
             "start": {
-              "line": 13,
-              "column": 6
+              "line": 14,
+              "column": 8
             },
             "end": {
-              "line": 15,
-              "column": 6
+              "line": 16,
+              "column": 8
             }
           },
           "moduleName": "nettle-front-end/trip/template.hbs"
@@ -3492,7 +3550,7 @@ define("nettle-front-end/trip/template", ["exports"], function (exports) {
         hasRendered: false,
         buildFragment: function buildFragment(dom) {
           var el0 = dom.createDocumentFragment();
-          var el1 = dom.createTextNode("        ");
+          var el1 = dom.createTextNode("          ");
           dom.appendChild(el0, el1);
           var el1 = dom.createComment("");
           dom.appendChild(el0, el1);
@@ -3505,7 +3563,7 @@ define("nettle-front-end/trip/template", ["exports"], function (exports) {
           morphs[0] = dom.createMorphAt(fragment, 1, 1, contextualElement);
           return morphs;
         },
-        statements: [["inline", "item-snippet", [], ["item", ["subexpr", "@mut", [["get", "eachItem", ["loc", [null, [14, 28], [14, 36]]]]], [], []]], ["loc", [null, [14, 8], [14, 38]]]]],
+        statements: [["inline", "item-snippet", [], ["item", ["subexpr", "@mut", [["get", "eachItem", ["loc", [null, [15, 30], [15, 38]]]]], [], []]], ["loc", [null, [15, 10], [15, 40]]]]],
         locals: ["eachItem"],
         templates: []
       };
@@ -3523,7 +3581,7 @@ define("nettle-front-end/trip/template", ["exports"], function (exports) {
             "column": 0
           },
           "end": {
-            "line": 24,
+            "line": 26,
             "column": 0
           }
         },
@@ -3557,19 +3615,26 @@ define("nettle-front-end/trip/template", ["exports"], function (exports) {
         dom.appendChild(el3, el4);
         var el4 = dom.createTextNode("\n      ");
         dom.appendChild(el3, el4);
-        var el4 = dom.createElement("h1");
-        var el5 = dom.createTextNode("Items");
+        var el4 = dom.createElement("div");
+        dom.setAttribute(el4, "class", "item-page");
+        var el5 = dom.createTextNode("\n      ");
+        dom.appendChild(el4, el5);
+        var el5 = dom.createElement("h1");
+        var el6 = dom.createTextNode("Items");
+        dom.appendChild(el5, el6);
+        dom.appendChild(el4, el5);
+        var el5 = dom.createTextNode("\n        ");
+        dom.appendChild(el4, el5);
+        var el5 = dom.createComment("");
+        dom.appendChild(el4, el5);
+        var el5 = dom.createTextNode("\n\n");
+        dom.appendChild(el4, el5);
+        var el5 = dom.createComment("");
+        dom.appendChild(el4, el5);
+        var el5 = dom.createTextNode("      ");
         dom.appendChild(el4, el5);
         dom.appendChild(el3, el4);
-        var el4 = dom.createTextNode("\n      ");
-        dom.appendChild(el3, el4);
-        var el4 = dom.createComment("");
-        dom.appendChild(el3, el4);
-        var el4 = dom.createTextNode("\n\n");
-        dom.appendChild(el3, el4);
-        var el4 = dom.createComment("");
-        dom.appendChild(el3, el4);
-        var el4 = dom.createTextNode("    ");
+        var el4 = dom.createTextNode("\n    ");
         dom.appendChild(el3, el4);
         dom.appendChild(el2, el3);
         var el3 = dom.createTextNode("\n    ");
@@ -3602,14 +3667,15 @@ define("nettle-front-end/trip/template", ["exports"], function (exports) {
       buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
         var element0 = dom.childAt(fragment, [1, 1]);
         var element1 = dom.childAt(element0, [1]);
+        var element2 = dom.childAt(element1, [5]);
         var morphs = new Array(4);
         morphs[0] = dom.createMorphAt(element1, 1, 1);
-        morphs[1] = dom.createMorphAt(element1, 7, 7);
-        morphs[2] = dom.createMorphAt(element1, 9, 9);
+        morphs[1] = dom.createMorphAt(element2, 3, 3);
+        morphs[2] = dom.createMorphAt(element2, 5, 5);
         morphs[3] = dom.createMorphAt(dom.childAt(element0, [3]), 3, 3);
         return morphs;
       },
-      statements: [["inline", "trip-details", [], ["trip", ["subexpr", "@mut", [["get", "model.trip", ["loc", [null, [6, 26], [6, 36]]]]], [], []], "routeUpdateTrip", "updateTrip"], ["loc", [null, [6, 6], [7, 51]]]], ["inline", "item-create", [], ["model", ["subexpr", "@mut", [["get", "model.trip", ["loc", [null, [10, 26], [10, 36]]]]], [], []], "routeCreateItem", "createItem"], ["loc", [null, [10, 6], [11, 50]]]], ["block", "each", [["get", "model.trip.items", ["loc", [null, [13, 14], [13, 30]]]]], [], 0, null, ["loc", [null, [13, 6], [15, 15]]]], ["inline", "outlet", [], ["routeRefresh", "refresh"], ["loc", [null, [19, 6], [19, 39]]]]],
+      statements: [["inline", "trip-details", [], ["trip", ["subexpr", "@mut", [["get", "model.trip", ["loc", [null, [6, 26], [6, 36]]]]], [], []], "routeUpdateTrip", "updateTrip"], ["loc", [null, [6, 6], [7, 51]]]], ["inline", "item-create", [], ["model", ["subexpr", "@mut", [["get", "model.trip", ["loc", [null, [11, 28], [11, 38]]]]], [], []], "routeCreateItem", "createItem"], ["loc", [null, [11, 8], [12, 52]]]], ["block", "each", [["get", "model.trip.items", ["loc", [null, [14, 16], [14, 32]]]]], [], 0, null, ["loc", [null, [14, 8], [16, 17]]]], ["inline", "outlet", [], ["routeRefresh", "refresh"], ["loc", [null, [21, 6], [21, 39]]]]],
       locals: [],
       templates: [child0]
     };

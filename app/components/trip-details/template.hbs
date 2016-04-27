@@ -10,27 +10,37 @@
 
 {{#unless isEditable}}
   <button class='btn btn-primary'{{action 'toggleEditable'}}>Edit</button>
-  <h1>{{trip.title}}</h1>
-  <h4>Location:</h4>
-  <h4>{{trip.location}}</h4>
+  <div class='trip-detail'>
+    <div class='trip-head'>
+      <h4>{{trip.title}}</h4>
+      <p>Location:</p>
+      <p>{{trip.location}}</p>
+    </div>
+    <div class='row'>
+      {{#if trip.arrival}}
+      <div class='col-md-2 col-md-offset-4'>
+        <h5>Arrival Date:</h5>
+        <h5>{{trip.arrival}}</h5>
+      </div>
+      {{/if}}
 
-  {{#if trip.arrival}}
-  <h5>Arrival Date:</h5>
-  <h5>{{trip.arrival}}</h5>
-  {{/if}}
+      {{#if trip.departure}}
+      <div class='col-md-2'>
+        <h5>Departure Date:</h5>
+        <h5>{{trip.departure}}</h5>
+      </div>
+      {{/if}}
+    </div>
 
-  {{#if trip.departure}}
-  <h5>Departure Date:</h5>
-  <h5>{{trip.departure}}</h5>
-  {{/if}}
-
-  {{#if trip.description}}
-  <h5>Description</h5>
-  <h5>{{trip.description}}</h5>
-  {{/if}}
+    {{#if trip.description}}
+    <h5>Description</h5>
+    <h5>{{trip.description}}</h5>
+    {{/if}}
+  </div>
 
 
 {{else}}
+<div class='trip-edit'>
 <p>Title</p>
 <p>{{input value=trip.title placeholder='Title'}}</p>
 <p>Location</p>
@@ -39,7 +49,9 @@
 {{jqui-datepicker value=arrival placeholder='Arrival' yearRange="2013:2015"}} {{myDate}}
 <p>Departure</p>
 {{jqui-datepicker value=departure placeholder='Departure' yearRange="2013:2015"}} {{myDate}}
+<p>Departure</p>
+{{textarea class='edit-textarea' placeholder='Description' value=form.description}}
 <button class='btn btn-warning' {{action 'updateTrip'}}>Save</button>
 <button class='btn btn-default'{{action 'toggleEditable'}}>Cancel</button>
-
+</div>
 {{/unless}}

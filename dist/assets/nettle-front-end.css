@@ -6190,7 +6190,7 @@ button.close {
   background-size: 100%;
   background-size: cover;
   bottom: 0;
-  color: #e5eee9;
+  color: #EEE9E5;
   font-family: 'Cinzel', serif;
   left: 0;
   position: absolute;
@@ -6268,13 +6268,73 @@ button.close {
   color: #FFFFFF;
   font-size: 20px; }
 
+.trip-form {
+  margin: auto;
+  text-align: center;
+  width: 450px; }
+
+.trip-form input {
+  margin: 10px; }
+
+.trip-form textarea {
+  height: 100px;
+  color: #555555;
+  margin: 10px;
+  width: 450px; }
+
+.trip-page {
+  margin: auto;
+  margin-top: 0px;
+  padding-top: 50px;
+  width: 700px; }
+
+.trip-page button {
+  position: relative;
+  top: 0;
+  left: 0; }
+
+.trip-head {
+  background-color: #FFFFFF;
+  color: black;
+  border-radius: 100%;
+  border: 1px solid white;
+  margin: auto;
+  height: 250px;
+  width: 250px; }
+
+.trip-head h4 {
+  margin-top: 70px;
+  margin-bottom: 20px; }
+
+.trip-form-page {
+  margin-top: 90px; }
+
+.trip-detail .date {
+  float: left; }
+
+.date {
+  margin-left: 50px; }
+
+.trip-edit {
+  margin: auto;
+  width: 300px; }
+
+.edit-textarea {
+  height: 100px;
+  color: #555555;
+  width: 300px; }
+
+.item-page {
+  margin: auto;
+  width: 300px; }
+
 .sidebar {
   background-color: #08294a;
   height: 100%;
   position: fixed;
   right: 0px;
   top: 51px;
-  width: 300px; }
+  width: 240px; }
 
 .user-cart {
   background-color: #FFCC66;
@@ -6297,31 +6357,6 @@ button.close {
 
 .invite-btn {
   float: right; }
-
-.trip-form {
-  margin: auto;
-  text-align: center;
-  width: 450px; }
-
-.trip-form input {
-  margin: 10px; }
-
-.trip-form textarea {
-  height: 100px;
-  margin: 10px;
-  width: 450px; }
-
-.trip-page {
-  margin: auto;
-  margin-top: 60px;
-  padding-top: 50px;
-  width: 300px; }
-
-.trip-page button {
-  margin-bottom: 20px; }
-
-.trip-form-page {
-  margin-top: 90px; }
 
 .users-display {
   margin: auto;

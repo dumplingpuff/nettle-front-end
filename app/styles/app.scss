@@ -11,7 +11,7 @@
   background-size: 100%;
   background-size: cover;
   bottom: 0;
-  color: rgb(229, 238, 233);
+  color: $darkerwhite;
   font-family: 'Cinzel', serif;
   left: 0;
   position: absolute;
@@ -106,6 +106,85 @@
   font-size: 20px;
 }
 
+// Trip Form
+
+.trip-form {
+  margin: auto;
+  text-align: center;
+  width: 450px;
+}
+
+.trip-form input {
+  margin: 10px;
+}
+
+.trip-form textarea {
+  height: 100px;
+  color: $gungrey;
+  margin: 10px;
+  width: 450px;
+}
+
+// Trip Detail
+
+.trip-page {
+  margin: auto;
+  margin-top: 0px;
+  padding-top: 50px;
+  width: 700px;
+}
+
+.trip-page button {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.trip-head {
+  background-color: $white;
+  color: black;
+  border-radius: 100%;
+  border: 1px solid white;
+  margin: auto;
+  height: 250px;
+  width: 250px;
+}
+
+.trip-head h4 {
+  margin-top: 70px;
+  margin-bottom: 20px;
+}
+
+.trip-form-page {
+  margin-top: 90px;
+}
+
+.trip-detail .date{
+  float: left;
+}
+
+.date {
+  margin-left: 50px;
+}
+
+.trip-edit {
+  margin: auto;
+  width: 300px;
+}
+
+.edit-textarea {
+  height: 100px;
+  color: $gungrey;
+  width: 300px;
+}
+
+// Item page
+
+.item-page {
+  margin: auto;
+  width: 300px;
+}
+
 // Sidebar
 
 .sidebar {
@@ -114,7 +193,7 @@
   position: fixed;
   right: 0px;
   top: 51px;
-  width: 300px;
+  width: 240px;
 }
 
 // User Cart
@@ -148,39 +227,6 @@
 
 .invite-btn {
   float: right;
-}
-
-// Trip Form
-
-.trip-form {
-  margin: auto;
-  text-align: center;
-  width: 450px;
-}
-
-.trip-form input {
-  margin: 10px;
-}
-
-.trip-form textarea {
-  height: 100px;
-  margin: 10px;
-  width: 450px;
-}
-
-.trip-page {
-  margin: auto;
-  margin-top: 60px;
-  padding-top: 50px;
-  width: 300px;
-}
-
-.trip-page button {
-  margin-bottom: 20px;
-}
-
-.trip-form-page {
-  margin-top: 90px;
 }
 
 // Invite User

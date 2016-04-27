@@ -6,13 +6,15 @@
       {{trip-details trip=model.trip
                      routeUpdateTrip='updateTrip'}}
       <br>
+      <div class='item-page'>
       <h1>Items</h1>
-      {{item-create model=model.trip
-                    routeCreateItem="createItem"}}
+        {{item-create model=model.trip
+                      routeCreateItem="createItem"}}
 
-      {{#each model.trip.items as |eachItem|}}
-        {{item-snippet item=eachItem}}
-      {{/each}}
+        {{#each model.trip.items as |eachItem|}}
+          {{item-snippet item=eachItem}}
+        {{/each}}
+      </div>
     </div>
     <div class='sidebar'>
       <h5>Friends</h5>

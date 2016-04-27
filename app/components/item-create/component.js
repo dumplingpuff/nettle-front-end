@@ -9,6 +9,7 @@ export default Ember.Component.extend({
       console.log(this.get('form'));
       this.set('form.trip', model);
       this.sendAction('routeCreateItem', this.get('form'));
+      // view.$('input').value = '';
     },
   }
 });
